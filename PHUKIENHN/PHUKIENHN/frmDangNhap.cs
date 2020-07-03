@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PHUKIENHN
 {
-    public partial class frmMain : Form
+    public partial class frmDangNhap : Form
     {
-        public frmMain()
+        public frmDangNhap()
         {
             InitializeComponent();
         }
