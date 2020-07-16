@@ -57,9 +57,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
+            this.button1 = new System.Windows.Forms.Button();
             this.gbTTHoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -115,9 +117,9 @@
             // 
             // LoaiHang
             // 
-            this.LoaiHang.Location = new System.Drawing.Point(547, 12);
+            this.LoaiHang.Location = new System.Drawing.Point(557, 38);
             this.LoaiHang.Name = "LoaiHang";
-            this.LoaiHang.Size = new System.Drawing.Size(385, 166);
+            this.LoaiHang.Size = new System.Drawing.Size(375, 140);
             this.LoaiHang.TabIndex = 1;
             // 
             // dataGridView1
@@ -127,9 +129,9 @@
             this.Name,
             this.Donvi,
             this.Price});
-            this.dataGridView1.Location = new System.Drawing.Point(547, 184);
+            this.dataGridView1.Location = new System.Drawing.Point(557, 184);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(385, 288);
+            this.dataGridView1.Size = new System.Drawing.Size(375, 288);
             this.dataGridView1.TabIndex = 2;
             // 
             // Name
@@ -299,45 +301,69 @@
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
             this.simpleButton2.Location = new System.Drawing.Point(464, 84);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(77, 35);
+            this.simpleButton2.Size = new System.Drawing.Size(87, 35);
             this.simpleButton2.TabIndex = 8;
             this.simpleButton2.Text = "Đặt SL";
-            // 
-            // simpleButton3
-            // 
-            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(464, 125);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(77, 35);
-            this.simpleButton3.TabIndex = 8;
-            this.simpleButton3.Text = "Đổi giá";
             // 
             // simpleButton4
             // 
             this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(464, 166);
+            this.simpleButton4.Location = new System.Drawing.Point(464, 125);
             this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(77, 35);
+            this.simpleButton4.Size = new System.Drawing.Size(87, 35);
             this.simpleButton4.TabIndex = 8;
             this.simpleButton4.Text = "CK%";
             // 
             // simpleButton5
             // 
             this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
-            this.simpleButton5.Location = new System.Drawing.Point(464, 207);
+            this.simpleButton5.Location = new System.Drawing.Point(465, 207);
             this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(77, 35);
+            this.simpleButton5.Size = new System.Drawing.Size(86, 35);
             this.simpleButton5.TabIndex = 8;
             this.simpleButton5.Text = "Xoá";
+            // 
+            // simpleButton6
+            // 
+            this.simpleButton6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.ImageOptions.Image")));
+            this.simpleButton6.Location = new System.Drawing.Point(464, 166);
+            this.simpleButton6.Name = "simpleButton6";
+            this.simpleButton6.Size = new System.Drawing.Size(40, 35);
+            this.simpleButton6.TabIndex = 8;
+            this.simpleButton6.Text = "CK%";
+            // 
+            // simpleButton7
+            // 
+            this.simpleButton7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton7.ImageOptions.Image")));
+            this.simpleButton7.Location = new System.Drawing.Point(510, 166);
+            this.simpleButton7.Name = "simpleButton7";
+            this.simpleButton7.Size = new System.Drawing.Size(40, 35);
+            this.simpleButton7.TabIndex = 8;
+            this.simpleButton7.Text = "CK%";
+            // 
+            // button1
+            // 
+            this.button1.AutoEllipsis = true;
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(878, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // frmTaoHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(941, 480);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.simpleButton5);
+            this.Controls.Add(this.simpleButton7);
+            this.Controls.Add(this.simpleButton6);
             this.Controls.Add(this.simpleButton4);
-            this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.groupBox1);
@@ -387,8 +413,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ChietKhau;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
+        private DevExpress.XtraEditors.SimpleButton simpleButton6;
+        private DevExpress.XtraEditors.SimpleButton simpleButton7;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -41,11 +41,11 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +54,8 @@
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -62,9 +64,9 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 12);
+            this.listBox1.Location = new System.Drawing.Point(12, 38);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(221, 511);
+            this.listBox1.Size = new System.Drawing.Size(221, 485);
             this.listBox1.TabIndex = 0;
             // 
             // dataGridView1
@@ -77,9 +79,9 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dataGridView1.Location = new System.Drawing.Point(239, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(239, 39);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(647, 247);
+            this.dataGridView1.Size = new System.Drawing.Size(647, 220);
             this.dataGridView1.TabIndex = 1;
             // 
             // Column1
@@ -153,23 +155,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Phiếu kho";
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column10,
-            this.Column11,
-            this.Column12,
-            this.Column13,
-            this.Column14});
-            this.dataGridView2.Location = new System.Drawing.Point(6, 45);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(632, 164);
-            this.dataGridView2.TabIndex = 0;
-            // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.CustomFormat = "dd/MM/yyyy";
@@ -205,6 +190,23 @@
             this.label3.Size = new System.Drawing.Size(20, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Từ";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Column10,
+            this.Column11,
+            this.Column12,
+            this.Column13,
+            this.Column14});
+            this.dataGridView2.Location = new System.Drawing.Point(6, 45);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(632, 164);
+            this.dataGridView2.TabIndex = 0;
             // 
             // Column7
             // 
@@ -247,12 +249,36 @@
             this.Column14.HeaderText = "Số lượng xuất";
             this.Column14.Name = "Column14";
             // 
+            // simpleButton2
+            // 
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(648, 265);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(116, 31);
+            this.simpleButton2.TabIndex = 4;
+            this.simpleButton2.Text = "Xem tồn kho";
+            // 
+            // button1
+            // 
+            this.button1.AutoEllipsis = true;
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(835, 10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // frmTonKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(898, 533);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
@@ -296,5 +322,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private System.Windows.Forms.Button button1;
     }
 }

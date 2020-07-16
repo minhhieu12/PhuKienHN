@@ -62,7 +62,6 @@
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
@@ -72,6 +71,7 @@
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiHang = new System.Windows.Forms.TreeView();
             this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gbTTHoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -344,7 +344,7 @@
             // simpleButton5
             // 
             this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
-            this.simpleButton5.Location = new System.Drawing.Point(829, 250);
+            this.simpleButton5.Location = new System.Drawing.Point(829, 209);
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.Size = new System.Drawing.Size(77, 35);
             this.simpleButton5.TabIndex = 9;
@@ -353,20 +353,11 @@
             // simpleButton4
             // 
             this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(829, 209);
+            this.simpleButton4.Location = new System.Drawing.Point(829, 168);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(77, 35);
             this.simpleButton4.TabIndex = 10;
             this.simpleButton4.Text = "CK%";
-            // 
-            // simpleButton3
-            // 
-            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(829, 168);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(77, 35);
-            this.simpleButton3.TabIndex = 11;
-            this.simpleButton3.Text = "Đổi giá";
             // 
             // simpleButton2
             // 
@@ -433,17 +424,31 @@
             // simpleButton8
             // 
             this.simpleButton8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton8.ImageOptions.Image")));
-            this.simpleButton8.Location = new System.Drawing.Point(829, 291);
+            this.simpleButton8.Location = new System.Drawing.Point(829, 250);
             this.simpleButton8.Name = "simpleButton8";
             this.simpleButton8.Size = new System.Drawing.Size(77, 35);
             this.simpleButton8.TabIndex = 9;
             this.simpleButton8.Text = "Xoá";
+            // 
+            // button1
+            // 
+            this.button1.AutoEllipsis = true;
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(1153, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 23);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // frmCapNhatHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1212, 498);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.LoaiHang);
             this.Controls.Add(this.simpleButton6);
@@ -451,7 +456,6 @@
             this.Controls.Add(this.simpleButton8);
             this.Controls.Add(this.simpleButton5);
             this.Controls.Add(this.simpleButton4);
-            this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.groupBox1);
@@ -463,7 +467,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmCapNhatHD";
-            this.Text = "frmCapNhatHD";
+            this.Text = "Cập nhật hoá đơn";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.gbTTHoaDon.ResumeLayout(false);
             this.gbTTHoaDon.PerformLayout();
@@ -507,7 +511,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton6;
         private DevExpress.XtraEditors.SimpleButton simpleButton7;
@@ -521,5 +524,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.TreeView LoaiHang;
         private DevExpress.XtraEditors.SimpleButton simpleButton8;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -16,5 +16,10 @@ namespace PHUKIENHN
         {
             InitializeComponent();
         }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

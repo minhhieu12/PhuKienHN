@@ -35,21 +35,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -65,7 +65,7 @@
             this.textBox1.Size = new System.Drawing.Size(556, 81);
             this.textBox1.TabIndex = 7;
             this.textBox1.Text = "                                                                                 " +
-    "         PHẦN MỀM TÍNH TIỀN VÀ QUẢN LÝ CỬA HÀNG H&N";
+    "         PHẦN MỀM TÍNH TIỀN VÀ QUẢN LÝ CỬA HÀNG HND";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
@@ -125,42 +125,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin cửa hàng";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(7, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(151, 104);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(164, 15);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(363, 16);
+            this.label5.Size = new System.Drawing.Size(367, 16);
             this.label5.TabIndex = 8;
             this.label5.Text = "CỬA HÀNG PHỤ KIỆN ĐIỆN THOẠI VÀ LAPTOP H&N";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(171, 43);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 13);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Chủ cửa hàng:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(254, 43);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Trần Minh Hiếu";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(340, 43);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 13);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Phạm Minh Nghĩa";
             // 
             // label9
             // 
@@ -171,14 +154,41 @@
             this.label9.TabIndex = 8;
             this.label9.Text = "Lê Thành Đạt";
             // 
-            // label10
+            // label8
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(171, 66);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 13);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "Điện thoại: ";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(340, 43);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(94, 13);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Phạm Minh Nghĩa";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(254, 43);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(80, 13);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Trần Minh Hiếu";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(254, 110);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(232, 13);
+            this.label13.TabIndex = 8;
+            this.label13.Text = "200, Trần Văn Ơn, Phú Hoà, TDM, Bình Dương";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(254, 88);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(135, 13);
+            this.label17.TabIndex = 8;
+            this.label17.Text = "hieuleggo1280@gmail.com";
             // 
             // label11
             // 
@@ -198,14 +208,32 @@
             this.label12.TabIndex = 8;
             this.label12.Text = "Địa chỉ:";
             // 
-            // label13
+            // label16
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(254, 110);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(232, 13);
-            this.label13.TabIndex = 8;
-            this.label13.Text = "200, Trần Văn Ơn, Phú Hoà, TDM, Bình Dương";
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(172, 88);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(29, 13);
+            this.label16.TabIndex = 8;
+            this.label16.Text = "Mail:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(171, 66);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(61, 13);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Điện thoại: ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(171, 43);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 13);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Chủ cửa hàng:";
             // 
             // label14
             // 
@@ -233,34 +261,6 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "Đóng";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(172, 88);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(29, 13);
-            this.label16.TabIndex = 8;
-            this.label16.Text = "Mail:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(254, 88);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(135, 13);
-            this.label17.TabIndex = 8;
-            this.label17.Text = "hieuleggo1280@gmail.com";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(7, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(151, 104);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
             // 
             // frmTTPM
             // 

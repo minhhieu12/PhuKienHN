@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PHUKIENHN
 {
-    public partial class frmDoiGia : Form
+    public partial class frmThanhToan : Form
     {
-        public frmDoiGia()
+        public frmThanhToan()
         {
             InitializeComponent();
         }

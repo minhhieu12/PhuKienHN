@@ -84,6 +84,7 @@
             this.btnDangNhap.Size = new System.Drawing.Size(110, 39);
             this.btnDangNhap.TabIndex = 4;
             this.btnDangNhap.Text = "Đăng nhập";
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // btnHuy
             // 

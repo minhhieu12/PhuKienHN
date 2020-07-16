@@ -53,11 +53,13 @@
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.btnCaLV = new DevExpress.XtraBars.BarButtonItem();
             this.btnDSSP = new DevExpress.XtraBars.BarButtonItem();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
             // 
+            this.ribbonControl1.BackColor = System.Drawing.SystemColors.Control;
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
@@ -263,11 +265,20 @@
             this.btnDSSP.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDSSP.ImageOptions.LargeImage")));
             this.btnDSSP.Name = "btnDSSP";
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Location = new System.Drawing.Point(0, 159);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1102, 357);
+            this.tabControl1.TabIndex = 1;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1102, 515);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.ribbonControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
@@ -305,6 +316,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
         private DevExpress.XtraBars.BarButtonItem btnCaLV;
         private DevExpress.XtraBars.BarButtonItem btnDSSP;
+        private System.Windows.Forms.TabControl tabControl1;
     }
 }
 
