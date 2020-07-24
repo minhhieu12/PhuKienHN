@@ -72,7 +72,7 @@
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -86,7 +86,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(415, 33);
+            this.groupBox1.Location = new System.Drawing.Point(415, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(493, 100);
             this.groupBox1.TabIndex = 0;
@@ -443,33 +443,29 @@
             // simpleButton7
             // 
             this.simpleButton7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton7.ImageOptions.Image")));
-            this.simpleButton7.Location = new System.Drawing.Point(658, 166);
+            this.simpleButton7.Location = new System.Drawing.Point(658, 165);
             this.simpleButton7.Name = "simpleButton7";
-            this.simpleButton7.Size = new System.Drawing.Size(156, 38);
+            this.simpleButton7.Size = new System.Drawing.Size(115, 38);
             this.simpleButton7.TabIndex = 2;
             this.simpleButton7.Text = "Xuất báo cáo";
             // 
-            // button1
+            // simpleButton3
             // 
-            this.button1.AutoEllipsis = true;
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(851, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(51, 23);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = false;
+            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.simpleButton3.Location = new System.Drawing.Point(827, 166);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(81, 38);
+            this.simpleButton3.TabIndex = 2;
+            this.simpleButton3.Text = "Thoát";
             // 
             // frmTinhLuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(916, 521);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.simpleButton5);
             this.Controls.Add(this.simpleButton4);
+            this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton7);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.groupBox2);
@@ -535,6 +531,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
         private DevExpress.XtraEditors.SimpleButton simpleButton7;
-        private System.Windows.Forms.Button button1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
     }
 }

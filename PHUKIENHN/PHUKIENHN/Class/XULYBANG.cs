@@ -59,7 +59,7 @@ namespace PHUKIENHN.Class
                 _da = new SqlDataAdapter(_query, _cnn);
                 _da.FillSchema(this, SchemaType.Mapped);
                 _da.Fill(this);
-                _da.RowUpdated += new SqlRowUpdatedEventHandler(da_RowUpdated);
+                _da.RowUpdated += new SqlRowUpdatedEventHandler(da_RowUpdate);
             }
             catch (SqlException ex)
             {

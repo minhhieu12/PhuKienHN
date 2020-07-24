@@ -54,6 +54,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\XULYBANG.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="frmCapNhatHD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,12 +92,6 @@
     </Compile>
     <Compile Include="frmDoanhThu.Designer.cs">
       <DependentUpon>frmDoanhThu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmDoiGia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDoiGia.Designer.cs">
-      <DependentUpon>frmDoiGia.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDoiMK.cs">
       <SubType>Form</SubType>
@@ -175,9 +172,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDoanhThu.resx">
       <DependentUpon>frmDoanhThu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmDoiGia.resx">
-      <DependentUpon>frmDoiGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDoiMK.resx">
       <DependentUpon>frmDoiMK.cs</DependentUpon>

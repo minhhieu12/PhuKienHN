@@ -82,7 +82,7 @@
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(1102, 160);
+            this.ribbonControl1.Size = new System.Drawing.Size(899, 160);
             // 
             // btnTaoHD
             // 
@@ -212,9 +212,8 @@
             // ribbonPageGroup5
             // 
             this.ribbonPageGroup5.ItemLinks.Add(this.btnPhieuNK);
-            this.ribbonPageGroup5.ItemLinks.Add(this.btnPhieuXK);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            this.ribbonPageGroup5.Text = "Quản lý sản phẩm";
+            this.ribbonPageGroup5.Text = "Sản phẩm";
             // 
             // ribbonPageGroup2
             // 
@@ -270,14 +269,14 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 159);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1102, 357);
+            this.tabControl1.Size = new System.Drawing.Size(899, 357);
             this.tabControl1.TabIndex = 1;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 515);
+            this.ClientSize = new System.Drawing.Size(899, 515);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.ribbonControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

@@ -31,10 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTaoHD));
             this.gbTTHoaDon = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.LoaiHang = new System.Windows.Forms.TreeView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Donvi = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,22 +64,29 @@
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.gbTTHoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbTTHoaDon
             // 
             this.gbTTHoaDon.Controls.Add(this.dateTimePicker1);
+            this.gbTTHoaDon.Controls.Add(this.textBox7);
+            this.gbTTHoaDon.Controls.Add(this.textBox6);
+            this.gbTTHoaDon.Controls.Add(this.label4);
             this.gbTTHoaDon.Controls.Add(this.textBox1);
+            this.gbTTHoaDon.Controls.Add(this.label3);
             this.gbTTHoaDon.Controls.Add(this.label2);
             this.gbTTHoaDon.Controls.Add(this.label1);
             this.gbTTHoaDon.Location = new System.Drawing.Point(12, 12);
             this.gbTTHoaDon.Name = "gbTTHoaDon";
-            this.gbTTHoaDon.Size = new System.Drawing.Size(446, 66);
+            this.gbTTHoaDon.Size = new System.Drawing.Size(446, 83);
             this.gbTTHoaDon.TabIndex = 0;
             this.gbTTHoaDon.TabStop = false;
             this.gbTTHoaDon.Text = "Thông tin hoá đơn";
@@ -90,12 +100,44 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(155, 20);
             this.dateTimePicker1.TabIndex = 2;
             // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(316, 52);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(124, 20);
+            this.textBox7.TabIndex = 1;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(78, 52);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(150, 20);
+            this.textBox6.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(244, 55);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Số điện thoại:";
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(78, 26);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(103, 20);
             this.textBox1.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 55);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Họ tên KH:";
             // 
             // label2
             // 
@@ -115,13 +157,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Số hoá đơn:";
             // 
-            // LoaiHang
-            // 
-            this.LoaiHang.Location = new System.Drawing.Point(557, 38);
-            this.LoaiHang.Name = "LoaiHang";
-            this.LoaiHang.Size = new System.Drawing.Size(375, 140);
-            this.LoaiHang.TabIndex = 1;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -129,9 +164,9 @@
             this.Name,
             this.Donvi,
             this.Price});
-            this.dataGridView1.Location = new System.Drawing.Point(557, 184);
+            this.dataGridView1.Location = new System.Drawing.Point(557, 155);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(375, 288);
+            this.dataGridView1.Size = new System.Drawing.Size(375, 317);
             this.dataGridView1.TabIndex = 2;
             // 
             // Name
@@ -162,9 +197,9 @@
             this.DonGia,
             this.ChietKhau,
             this.ThanhTien});
-            this.dataGridView2.Location = new System.Drawing.Point(12, 84);
+            this.dataGridView2.Location = new System.Drawing.Point(12, 101);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(446, 284);
+            this.dataGridView2.Size = new System.Drawing.Size(446, 267);
             this.dataGridView2.TabIndex = 2;
             // 
             // TenHang
@@ -290,16 +325,16 @@
             // simpleButton1
             // 
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(464, 428);
+            this.simpleButton1.Location = new System.Drawing.Point(464, 387);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(77, 44);
+            this.simpleButton1.Size = new System.Drawing.Size(86, 44);
             this.simpleButton1.TabIndex = 7;
             this.simpleButton1.Text = "T.Toán";
             // 
             // simpleButton2
             // 
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(464, 84);
+            this.simpleButton2.Location = new System.Drawing.Point(464, 101);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(87, 35);
             this.simpleButton2.TabIndex = 8;
@@ -308,7 +343,7 @@
             // simpleButton4
             // 
             this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(464, 125);
+            this.simpleButton4.Location = new System.Drawing.Point(464, 142);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(87, 35);
             this.simpleButton4.TabIndex = 8;
@@ -317,7 +352,7 @@
             // simpleButton5
             // 
             this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
-            this.simpleButton5.Location = new System.Drawing.Point(465, 207);
+            this.simpleButton5.Location = new System.Drawing.Point(465, 224);
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.Size = new System.Drawing.Size(86, 35);
             this.simpleButton5.TabIndex = 8;
@@ -326,7 +361,7 @@
             // simpleButton6
             // 
             this.simpleButton6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.ImageOptions.Image")));
-            this.simpleButton6.Location = new System.Drawing.Point(464, 166);
+            this.simpleButton6.Location = new System.Drawing.Point(464, 183);
             this.simpleButton6.Name = "simpleButton6";
             this.simpleButton6.Size = new System.Drawing.Size(40, 35);
             this.simpleButton6.TabIndex = 8;
@@ -335,31 +370,46 @@
             // simpleButton7
             // 
             this.simpleButton7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton7.ImageOptions.Image")));
-            this.simpleButton7.Location = new System.Drawing.Point(510, 166);
+            this.simpleButton7.Location = new System.Drawing.Point(510, 183);
             this.simpleButton7.Name = "simpleButton7";
             this.simpleButton7.Size = new System.Drawing.Size(40, 35);
             this.simpleButton7.TabIndex = 8;
             this.simpleButton7.Text = "CK%";
             // 
-            // button1
+            // groupBox2
             // 
-            this.button1.AutoEllipsis = true;
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(878, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(51, 23);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = false;
+            this.groupBox2.Controls.Add(this.listBox1);
+            this.groupBox2.Location = new System.Drawing.Point(557, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(372, 137);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Loại hàng";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(6, 19);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(360, 108);
+            this.listBox1.TabIndex = 0;
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.simpleButton3.Location = new System.Drawing.Point(464, 437);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(86, 35);
+            this.simpleButton3.TabIndex = 8;
+            this.simpleButton3.Text = "Thoát";
             // 
             // frmTaoHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(941, 480);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton5);
             this.Controls.Add(this.simpleButton7);
             this.Controls.Add(this.simpleButton6);
@@ -369,16 +419,15 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.LoaiHang);
             this.Controls.Add(this.gbTTHoaDon);
-            this.Name = "frmTaoHD";
-            this.Text = "Tạo hoá đơn";
+            //this.Name = "frmTaoHD";
             this.gbTTHoaDon.ResumeLayout(false);
             this.gbTTHoaDon.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -386,7 +435,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gbTTHoaDon;
-        private System.Windows.Forms.TreeView LoaiHang;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox textBox1;
@@ -417,6 +465,12 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
         private DevExpress.XtraEditors.SimpleButton simpleButton6;
         private DevExpress.XtraEditors.SimpleButton simpleButton7;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
     }
 }
