@@ -82,7 +82,7 @@
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(899, 160);
+            this.ribbonControl1.Size = new System.Drawing.Size(916, 160);
             // 
             // btnTaoHD
             // 
@@ -276,12 +276,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(899, 515);
+            this.ClientSize = new System.Drawing.Size(916, 515);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.ribbonControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
-            this.Text = "PHẦN MỀM TÍNH TIỀN VÀ QUẢN LÝ CỬA HÀNG PHỤ KIỆN H&N";
+            this.Text = "PHẦN MỀM QUẢN LÝ CỬA HÀNG PHỤ KIỆN";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             this.ResumeLayout(false);
