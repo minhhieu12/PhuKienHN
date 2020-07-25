@@ -19,7 +19,9 @@ namespace PHUKIENHN
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            TabPage p = (TabPage)this.Parent;
+            TabControl tabMain = (TabControl)p.Parent;
+            tabMain.TabPages.Remove(p);
         }
     }
 }

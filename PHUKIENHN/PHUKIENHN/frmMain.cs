@@ -153,6 +153,11 @@ namespace PHUKIENHN
             FrmTTPM.ShowDialog();
         }
 
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            tabform.TabPages.Remove(tabform.SelectedTab);
+        }
+
         private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
         {
             if (MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)

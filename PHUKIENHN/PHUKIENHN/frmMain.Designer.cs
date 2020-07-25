@@ -55,6 +55,8 @@
             this.btnCaLV = new DevExpress.XtraBars.BarButtonItem();
             this.btnDSSP = new DevExpress.XtraBars.BarButtonItem();
             this.tabform = new System.Windows.Forms.TabControl();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,14 +80,14 @@
             this.btnCapNhatHD,
             this.btnTonKho,
             this.btnTTPM,
-            this.btnDangXuat});
+            this.btnDangXuat,
+            this.barButtonItem1});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 19;
+            this.ribbonControl1.MaxItemId = 20;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(987, 160);
-            this.ribbonControl1.Size = new System.Drawing.Size(916, 160);
+            this.ribbonControl1.Size = new System.Drawing.Size(1019, 160);
             // 
             // btnTaoHD
             // 
@@ -213,7 +215,8 @@
             this.ribbonPageGroup6,
             this.ribbonPageGroup7,
             this.ribbonPageGroup8,
-            this.ribbonPageGroup4});
+            this.ribbonPageGroup4,
+            this.ribbonPageGroup3});
             this.ribbonPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage1.ImageOptions.Image")));
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Sử dụng phần mềm";
@@ -287,16 +290,26 @@
             this.tabform.Location = new System.Drawing.Point(0, 160);
             this.tabform.Name = "tabform";
             this.tabform.SelectedIndex = 0;
-            this.tabform.Size = new System.Drawing.Size(987, 558);
+            this.tabform.Size = new System.Drawing.Size(1019, 363);
             this.tabform.TabIndex = 1;
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "ribbonPageGroup3";
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "e";
+            this.barButtonItem1.Id = 19;
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(987, 718);
-            this.Controls.Add(this.tabform);
-            this.ClientSize = new System.Drawing.Size(916, 515);
+            this.ClientSize = new System.Drawing.Size(1019, 523);
             this.Controls.Add(this.tabform);
             this.Controls.Add(this.ribbonControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -338,6 +351,8 @@
         private DevExpress.XtraBars.BarButtonItem btnDSSP;
         private System.Windows.Forms.TabControl tabform;
         private DevExpress.XtraBars.BarButtonItem btnDangXuat;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
     }
 }
 
