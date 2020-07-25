@@ -11,6 +11,7 @@ namespace PHUKIENHN.Class
     class XULYBANG: DataTable
     {
         #region Fields
+        //HIHI
         public static string cnnStr = "Data Source=NGHIAPH\\SQLEXPRESS;Initial Catalog=PHUKIENHN;Integrated Security=True";
         private static SqlConnection _cnn;
         private SqlDataAdapter _da = new SqlDataAdapter();
