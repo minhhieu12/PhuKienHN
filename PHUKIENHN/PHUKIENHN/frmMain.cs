@@ -31,39 +31,26 @@ namespace PHUKIENHN
 
         private void btnTaoHD_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            addTabPage();
-        }
-
-        public void addTabPage()
-        {
-            frmTaoHD FrmTaoHD = new frmTaoHD();
-            int index = checkExists(tabform, FrmTaoHD);
+            int index = tabform.TabPages.IndexOfKey("TaoHoaDon");
             if (index >= 0)
-            {
-                tabform.TabIndex = index;
-            }
+                tabform.SelectedIndex = index;
             else
             {
-                TabPage tabpage = new TabPage { Text = FrmTaoHD.Text };
-                tabpage.BorderStyle = BorderStyle.Fixed3D;
-                tabform.TabPages.Add(tabpage);
-                FrmTaoHD.TopLevel = false;
-                FrmTaoHD.Parent = tabpage;
-                FrmTaoHD.Show();
-                FrmTaoHD.Dock = DockStyle.Fill;
+                frmTaoHD f = new frmTaoHD();
+                f.Text = "Tạo hóa đơn";
+                f.MdiParent = this;
+                TabPage p = new TabPage(f.Text);
+                p.Name = "TaoHoaDon";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabform.TabPages.Add(p);
+                f.Show();
             }
-            
         }
 
-        public int checkExists(TabControl tabform, Form frm)
-        {
-            for (int i = 0; i < tabform.TabCount; i++)
-            {
-                if (tabform.TabPages[i].Text.Trim() == frm.Text.Trim())
-                    return 1;
-            }
-            return -1;
-        }
+        
 
         public void enableControl()
         {
@@ -145,6 +132,8 @@ namespace PHUKIENHN
         private void frmMain_Load(object sender, EventArgs e)
         {
             enableControl();
+            this.IsMdiContainer = true;
+            
         }
 
         private void btnTTPM_ItemClick(object sender, ItemClickEventArgs e)
