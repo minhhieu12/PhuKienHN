@@ -111,7 +111,7 @@
             this.textBox1.Size = new System.Drawing.Size(523, 81);
             this.textBox1.TabIndex = 4;
             this.textBox1.Text = "                                                                                P" +
-    "HẦN MỀM TÍNH TIỀN VÀ QUẢN LÝ CỬA HÀNG H&N";
+    "HẦN MỀM TÍNH TIỀN VÀ QUẢN LÝ CỬA HÀNG HND";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox1
