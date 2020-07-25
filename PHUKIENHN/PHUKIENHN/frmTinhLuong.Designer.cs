@@ -72,7 +72,7 @@
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -449,14 +449,15 @@
             this.simpleButton7.TabIndex = 2;
             this.simpleButton7.Text = "Xuất báo cáo";
             // 
-            // simpleButton3
+            // btnThoat
             // 
-            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(827, 166);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(81, 38);
-            this.simpleButton3.TabIndex = 2;
-            this.simpleButton3.Text = "Thoát";
+            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.btnThoat.Location = new System.Drawing.Point(827, 166);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(81, 38);
+            this.btnThoat.TabIndex = 2;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // frmTinhLuong
             // 
@@ -465,7 +466,7 @@
             this.ClientSize = new System.Drawing.Size(916, 521);
             this.Controls.Add(this.simpleButton5);
             this.Controls.Add(this.simpleButton4);
-            this.Controls.Add(this.simpleButton3);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.simpleButton7);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.groupBox2);
@@ -531,6 +532,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
         private DevExpress.XtraEditors.SimpleButton simpleButton7;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton btnThoat;
     }
 }

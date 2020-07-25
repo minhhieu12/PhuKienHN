@@ -50,6 +50,7 @@ namespace PHUKIENHN
             }
         }
 
+
         
 
         public void enableControl()
@@ -145,6 +146,153 @@ namespace PHUKIENHN
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
             tabform.TabPages.Remove(tabform.SelectedTab);
+        }
+
+        private void btnCapNhatHD_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int index = tabform.TabPages.IndexOfKey("CapNhatHoaDon");
+            if (index >= 0)
+                tabform.SelectedIndex = index;
+            else
+            {
+                frmCapNhatHD f = new frmCapNhatHD();
+                f.Text = "Tạo hóa đơn";
+                f.MdiParent = this;
+                TabPage p = new TabPage(f.Text);
+                p.Name = "TaoHoaDon";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabform.TabPages.Add(p);
+                f.Show();
+            }
+        }
+
+        private void btnPhieuNK_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int index = tabform.TabPages.IndexOfKey("TaoPhieuNhapKho");
+            if (index >= 0)
+                tabform.SelectedIndex = index;
+            else
+            {
+                frmTaoPNK f = new frmTaoPNK();
+                f.Text = "Tạo hóa đơn";
+                f.MdiParent = this;
+                TabPage p = new TabPage(f.Text);
+                p.Name = "TaoHoaDon";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabform.TabPages.Add(p);
+                f.Show();
+            }
+        }
+
+        private void btnDSNV_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int index = tabform.TabPages.IndexOfKey("QuanLyNhanVien");
+            if (index >= 0)
+                tabform.SelectedIndex = index;
+            else
+            {
+                frmDSNV f = new frmDSNV();
+                f.Text = "Quản lý nhân viên";
+                f.MdiParent = this;
+                TabPage p = new TabPage(f.Text);
+                p.Name = "QuanLyNhanVien";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabform.TabPages.Add(p);
+                f.Show();
+            }
+        }
+
+        private void btnTinhLuong_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int index = tabform.TabPages.IndexOfKey("TinhLuong");
+            if (index >= 0)
+                tabform.SelectedIndex = index;
+            else
+            {
+                frmTinhLuong f = new frmTinhLuong();
+                f.Text = "Tính lương";
+                f.MdiParent = this;
+                TabPage p = new TabPage(f.Text);
+                p.Name = "TinhLuong";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabform.TabPages.Add(p);
+                f.Show();
+            }
+        }
+
+        private void btnDoanhThu_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int index = tabform.TabPages.IndexOfKey("DoanhThu");
+            if (index >= 0)
+                tabform.SelectedIndex = index;
+            else
+            {
+                frmDoanhThu f = new frmDoanhThu();
+                f.Text = "Doanh thu";
+                f.MdiParent = this;
+                TabPage p = new TabPage(f.Text);
+                p.Name = "DoanhThu";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabform.TabPages.Add(p);
+                f.Show();
+            }
+        }
+
+        private void btnTonKho_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int index = tabform.TabPages.IndexOfKey("TonKho");
+            if (index >= 0)
+                tabform.SelectedIndex = index;
+            else
+            {
+                frmTonKho f = new frmTonKho();
+                f.Text = "Tồn Kho";
+                f.MdiParent = this;
+                TabPage p = new TabPage(f.Text);
+                p.Name = "TonKho";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabform.TabPages.Add(p);
+                f.Show();
+            }
+        }
+
+        private void btnTTDonHang_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int index = tabform.TabPages.IndexOfKey("CapNhatTTDonHang");
+            if (index >= 0)
+                tabform.SelectedIndex = index;
+            else
+            {
+                frmCapNhatTTDH f = new frmCapNhatTTDH();
+                f.Text = "Cập nhật tình trạng đơn hàng";
+                f.MdiParent = this;
+                TabPage p = new TabPage(f.Text);
+                p.Name = "CapNhatTinhTrangDonHang";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabform.TabPages.Add(p);
+                f.Show();
+            }
         }
 
         private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)

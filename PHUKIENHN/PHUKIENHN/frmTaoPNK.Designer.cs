@@ -71,7 +71,7 @@
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -192,7 +192,7 @@
             this.Column3});
             this.dataGridView1.Location = new System.Drawing.Point(12, 232);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(269, 289);
+            this.dataGridView1.Size = new System.Drawing.Size(269, 213);
             this.dataGridView1.TabIndex = 1;
             // 
             // Column1
@@ -319,7 +319,7 @@
             this.Column9});
             this.dataGridView2.Location = new System.Drawing.Point(403, 232);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(538, 289);
+            this.dataGridView2.Size = new System.Drawing.Size(538, 213);
             this.dataGridView2.TabIndex = 5;
             // 
             // Column4
@@ -444,22 +444,23 @@
             this.simpleButton4.TabIndex = 4;
             this.simpleButton4.Text = "In";
             // 
-            // simpleButton5
+            // btnThoat
             // 
-            this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
-            this.simpleButton5.Location = new System.Drawing.Point(864, 192);
-            this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(77, 34);
-            this.simpleButton5.TabIndex = 4;
-            this.simpleButton5.Text = "Thoát";
+            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
+            this.btnThoat.Location = new System.Drawing.Point(864, 192);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(77, 34);
+            this.btnThoat.TabIndex = 4;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // frmTaoPNK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(953, 533);
+            this.ClientSize = new System.Drawing.Size(953, 453);
             this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.simpleButton5);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.simpleButton4);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton2);
@@ -534,6 +535,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton5;
+        private DevExpress.XtraEditors.SimpleButton btnThoat;
     }
 }

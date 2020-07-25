@@ -64,7 +64,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -119,7 +119,7 @@
             this.Column7});
             this.dataGridView1.Location = new System.Drawing.Point(15, 52);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(686, 295);
+            this.dataGridView1.Size = new System.Drawing.Size(686, 251);
             this.dataGridView1.TabIndex = 2;
             // 
             // Column1
@@ -171,7 +171,7 @@
             this.Column14});
             this.dataGridView2.Location = new System.Drawing.Point(707, 52);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(562, 499);
+            this.dataGridView2.Size = new System.Drawing.Size(562, 387);
             this.dataGridView2.TabIndex = 3;
             // 
             // Column8
@@ -226,22 +226,22 @@
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(15, 353);
+            this.groupBox1.Location = new System.Drawing.Point(15, 309);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(686, 198);
+            this.groupBox1.Size = new System.Drawing.Size(686, 130);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(163, 141);
+            this.textBox6.Location = new System.Drawing.Point(160, 97);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(199, 20);
             this.textBox6.TabIndex = 1;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(130, 93);
+            this.textBox3.Location = new System.Drawing.Point(130, 71);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(199, 20);
             this.textBox3.TabIndex = 1;
@@ -251,7 +251,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(20, 142);
+            this.label8.Location = new System.Drawing.Point(17, 98);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(137, 16);
             this.label8.TabIndex = 0;
@@ -261,7 +261,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(20, 96);
+            this.label5.Location = new System.Drawing.Point(20, 74);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(104, 16);
             this.label5.TabIndex = 0;
@@ -269,7 +269,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(130, 55);
+            this.textBox2.Location = new System.Drawing.Point(130, 45);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(199, 20);
             this.textBox2.TabIndex = 1;
@@ -278,7 +278,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(20, 58);
+            this.label4.Location = new System.Drawing.Point(20, 48);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 16);
             this.label4.TabIndex = 0;
@@ -286,7 +286,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(498, 57);
+            this.textBox5.Location = new System.Drawing.Point(498, 44);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(168, 20);
             this.textBox5.TabIndex = 1;
@@ -302,7 +302,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(357, 61);
+            this.label7.Location = new System.Drawing.Point(357, 48);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(135, 16);
             this.label7.TabIndex = 0;
@@ -353,22 +353,23 @@
             this.simpleButton2.TabIndex = 5;
             this.simpleButton2.Text = "Xem doanh thu";
             // 
-            // simpleButton3
+            // btnThoat
             // 
-            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(1190, 12);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(79, 34);
-            this.simpleButton3.TabIndex = 5;
-            this.simpleButton3.Text = "Thoát";
+            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.btnThoat.Location = new System.Drawing.Point(1190, 12);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(79, 34);
+            this.btnThoat.TabIndex = 5;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // frmDoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1277, 563);
+            this.ClientSize = new System.Drawing.Size(1277, 451);
             this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.simpleButton3);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView2);
@@ -425,6 +426,6 @@
         private System.Windows.Forms.Label label3;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton btnThoat;
     }
 }

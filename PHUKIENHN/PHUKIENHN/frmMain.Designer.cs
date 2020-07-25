@@ -44,6 +44,7 @@
             this.btnTonKho = new DevExpress.XtraBars.BarButtonItem();
             this.btnTTPM = new DevExpress.XtraBars.BarButtonItem();
             this.btnDangXuat = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -52,11 +53,10 @@
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.btnCaLV = new DevExpress.XtraBars.BarButtonItem();
             this.btnDSSP = new DevExpress.XtraBars.BarButtonItem();
             this.tabform = new System.Windows.Forms.TabControl();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,6 +114,7 @@
             this.btnDSNV.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDSNV.ImageOptions.Image")));
             this.btnDSNV.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDSNV.ImageOptions.LargeImage")));
             this.btnDSNV.Name = "btnDSNV";
+            this.btnDSNV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDSNV_ItemClick);
             // 
             // btnTinhLuong
             // 
@@ -122,6 +123,7 @@
             this.btnTinhLuong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTinhLuong.ImageOptions.Image")));
             this.btnTinhLuong.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTinhLuong.ImageOptions.LargeImage")));
             this.btnTinhLuong.Name = "btnTinhLuong";
+            this.btnTinhLuong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTinhLuong_ItemClick);
             // 
             // btnTTDonHang
             // 
@@ -130,6 +132,7 @@
             this.btnTTDonHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTTDonHang.ImageOptions.Image")));
             this.btnTTDonHang.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTTDonHang.ImageOptions.LargeImage")));
             this.btnTTDonHang.Name = "btnTTDonHang";
+            this.btnTTDonHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTTDonHang_ItemClick);
             // 
             // btnPhieuNK
             // 
@@ -138,6 +141,7 @@
             this.btnPhieuNK.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPhieuNK.ImageOptions.Image")));
             this.btnPhieuNK.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPhieuNK.ImageOptions.LargeImage")));
             this.btnPhieuNK.Name = "btnPhieuNK";
+            this.btnPhieuNK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPhieuNK_ItemClick);
             // 
             // btnPhieuXK
             // 
@@ -171,6 +175,7 @@
             this.btnDoanhThu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDoanhThu.ImageOptions.Image")));
             this.btnDoanhThu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDoanhThu.ImageOptions.LargeImage")));
             this.btnDoanhThu.Name = "btnDoanhThu";
+            this.btnDoanhThu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDoanhThu_ItemClick);
             // 
             // btnCapNhatHD
             // 
@@ -179,6 +184,7 @@
             this.btnCapNhatHD.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCapNhatHD.ImageOptions.Image")));
             this.btnCapNhatHD.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnCapNhatHD.ImageOptions.LargeImage")));
             this.btnCapNhatHD.Name = "btnCapNhatHD";
+            this.btnCapNhatHD.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCapNhatHD_ItemClick);
             // 
             // btnTonKho
             // 
@@ -187,6 +193,7 @@
             this.btnTonKho.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTonKho.ImageOptions.Image")));
             this.btnTonKho.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTonKho.ImageOptions.LargeImage")));
             this.btnTonKho.Name = "btnTonKho";
+            this.btnTonKho.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTonKho_ItemClick);
             // 
             // btnTTPM
             // 
@@ -205,6 +212,13 @@
             this.btnDangXuat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.ImageOptions.LargeImage")));
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDangXuat_ItemClick);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "e";
+            this.barButtonItem1.Id = 19;
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -268,6 +282,11 @@
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Chức năng khác";
             // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "ribbonPageGroup3";
+            // 
             // btnCaLV
             // 
             this.btnCaLV.Caption = "Ca làm việc";
@@ -292,18 +311,6 @@
             this.tabform.SelectedIndex = 0;
             this.tabform.Size = new System.Drawing.Size(1019, 363);
             this.tabform.TabIndex = 1;
-            // 
-            // ribbonPageGroup3
-            // 
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "ribbonPageGroup3";
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Caption = "e";
-            this.barButtonItem1.Id = 19;
-            this.barButtonItem1.Name = "barButtonItem1";
-            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // frmMain
             // 

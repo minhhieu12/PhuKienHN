@@ -81,7 +81,7 @@
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gbTTHoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -137,7 +137,7 @@
             this.Column4});
             this.dataGridView1.Location = new System.Drawing.Point(12, 118);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(393, 429);
+            this.dataGridView1.Size = new System.Drawing.Size(393, 366);
             this.dataGridView1.TabIndex = 4;
             // 
             // Column1
@@ -267,7 +267,7 @@
             this.ThanhTien});
             this.dataGridView2.Location = new System.Drawing.Point(411, 155);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(412, 283);
+            this.dataGridView2.Size = new System.Drawing.Size(412, 225);
             this.dataGridView2.TabIndex = 3;
             // 
             // TenHang
@@ -314,7 +314,7 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Location = new System.Drawing.Point(411, 449);
+            this.groupBox1.Location = new System.Drawing.Point(411, 386);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(412, 98);
             this.groupBox1.TabIndex = 7;
@@ -393,7 +393,7 @@
             // simpleButton5
             // 
             this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
-            this.simpleButton5.Location = new System.Drawing.Point(829, 362);
+            this.simpleButton5.Location = new System.Drawing.Point(829, 352);
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.Size = new System.Drawing.Size(77, 35);
             this.simpleButton5.TabIndex = 9;
@@ -420,7 +420,7 @@
             // simpleButton6
             // 
             this.simpleButton6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.ImageOptions.Image")));
-            this.simpleButton6.Location = new System.Drawing.Point(829, 403);
+            this.simpleButton6.Location = new System.Drawing.Point(829, 393);
             this.simpleButton6.Name = "simpleButton6";
             this.simpleButton6.Size = new System.Drawing.Size(77, 35);
             this.simpleButton6.TabIndex = 9;
@@ -435,7 +435,7 @@
             this.Price});
             this.dataGridView3.Location = new System.Drawing.Point(912, 155);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(292, 391);
+            this.dataGridView3.Size = new System.Drawing.Size(292, 329);
             this.dataGridView3.TabIndex = 14;
             // 
             // Name
@@ -538,27 +538,28 @@
             this.listBox1.Size = new System.Drawing.Size(280, 108);
             this.listBox1.TabIndex = 0;
             // 
-            // simpleButton1
+            // btnThoat
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(829, 507);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(77, 36);
-            this.simpleButton1.TabIndex = 9;
-            this.simpleButton1.Text = "Thoát";
+            this.btnThoat.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Appearance.Options.UseFont = true;
+            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnThoat.Location = new System.Drawing.Point(829, 445);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(77, 36);
+            this.btnThoat.TabIndex = 9;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // frmCapNhatHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1212, 559);
+            this.ClientSize = new System.Drawing.Size(1212, 491);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.simpleButton6);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.simpleButton8);
             this.Controls.Add(this.simpleButton5);
             this.Controls.Add(this.simpleButton4);
@@ -571,7 +572,7 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            //this.Name = "frmCapNhatHD";
+          //  this.Name = "frmCapNhatHD";
             this.Text = "Cập nhật hoá đơn";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.gbTTHoaDon.ResumeLayout(false);
@@ -642,6 +643,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ListBox listBox1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnThoat;
     }
 }
