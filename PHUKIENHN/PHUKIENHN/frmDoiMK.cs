@@ -41,6 +41,8 @@ namespace PHUKIENHN
                 strErr = "Mật khẩu vui lòng không được bỏ trống!";
             else if (strMatKhauMoi != strNhapLaiMatKhauMoi)
                 strErr = "Mật khẩu mới đã nhập không trùng nhau!";
+            else if (strMatKhauMoi == strMatKhauCu)
+                strErr = "Mật khẩu mới không được trùng với mật khẩu cũ!";
             else if (PassWord != strMatKhauCu)
                 strErr = "Mật khẩu cũ sai!";
 
