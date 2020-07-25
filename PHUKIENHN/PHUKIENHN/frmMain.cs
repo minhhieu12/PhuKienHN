@@ -156,10 +156,10 @@ namespace PHUKIENHN
             else
             {
                 frmCapNhatHD f = new frmCapNhatHD();
-                f.Text = "Tạo hóa đơn";
+                f.Text = "Cập nhật hóa đơn";
                 f.MdiParent = this;
                 TabPage p = new TabPage(f.Text);
-                p.Name = "TaoHoaDon";
+                p.Name = "CapNhatHoaDon";
                 f.TopLevel = false;
                 p.Controls.Add(f);
                 f.Dock = DockStyle.Fill;
@@ -177,10 +177,10 @@ namespace PHUKIENHN
             else
             {
                 frmTaoPNK f = new frmTaoPNK();
-                f.Text = "Tạo hóa đơn";
+                f.Text = "Tạo phiếu nhập kho";
                 f.MdiParent = this;
                 TabPage p = new TabPage(f.Text);
-                p.Name = "TaoHoaDon";
+                p.Name = "TaoPhieuNhapKho";
                 f.TopLevel = false;
                 p.Controls.Add(f);
                 f.Dock = DockStyle.Fill;
@@ -285,7 +285,7 @@ namespace PHUKIENHN
                 f.Text = "Cập nhật tình trạng đơn hàng";
                 f.MdiParent = this;
                 TabPage p = new TabPage(f.Text);
-                p.Name = "CapNhatTinhTrangDonHang";
+                p.Name = "CapNhatTTDonHang";
                 f.TopLevel = false;
                 p.Controls.Add(f);
                 f.Dock = DockStyle.Fill;
