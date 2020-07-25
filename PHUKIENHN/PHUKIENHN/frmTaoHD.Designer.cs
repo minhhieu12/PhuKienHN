@@ -402,6 +402,7 @@
             this.simpleButton3.Size = new System.Drawing.Size(86, 35);
             this.simpleButton3.TabIndex = 8;
             this.simpleButton3.Text = "Thoát";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // frmTaoHD
             // 
@@ -420,7 +421,9 @@
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gbTTHoaDon);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             //this.Name = "frmTaoHD";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.gbTTHoaDon.ResumeLayout(false);
             this.gbTTHoaDon.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

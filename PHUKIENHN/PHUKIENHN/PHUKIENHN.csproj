@@ -54,6 +54,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\XLBANG_CTHOADON.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\XLBANG_CTPHIEUNHAP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\XLBANG_HOADON.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\XLBANG_KHACHHANG.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\XLBANG_NHACUNGCAP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\XLBANG_NHANVIEN.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Class\XULYBANG.cs">
       <SubType>Component</SubType>
     </Compile>

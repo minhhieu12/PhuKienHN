@@ -65,14 +65,15 @@
             this.txtTenDN.Location = new System.Drawing.Point(303, 128);
             this.txtTenDN.Name = "txtTenDN";
             this.txtTenDN.Size = new System.Drawing.Size(191, 20);
-            this.txtTenDN.TabIndex = 3;
+            this.txtTenDN.TabIndex = 0;
             // 
             // txtMK
             // 
             this.txtMK.Location = new System.Drawing.Point(303, 167);
             this.txtMK.Name = "txtMK";
+            this.txtMK.PasswordChar = '*';
             this.txtMK.Size = new System.Drawing.Size(191, 20);
-            this.txtMK.TabIndex = 3;
+            this.txtMK.TabIndex = 1;
             // 
             // btnDangNhap
             // 
@@ -82,7 +83,7 @@
             this.btnDangNhap.Location = new System.Drawing.Point(209, 222);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(110, 39);
-            this.btnDangNhap.TabIndex = 4;
+            this.btnDangNhap.TabIndex = 2;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
@@ -90,12 +91,14 @@
             // 
             this.btnHuy.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.Appearance.Options.UseFont = true;
+            this.btnHuy.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnHuy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.ImageOptions.Image")));
             this.btnHuy.Location = new System.Drawing.Point(353, 222);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(110, 39);
-            this.btnHuy.TabIndex = 4;
+            this.btnHuy.TabIndex = 3;
             this.btnHuy.Text = "Huỷ";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // textBox1
             // 
@@ -106,7 +109,7 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(523, 81);
-            this.textBox1.TabIndex = 6;
+            this.textBox1.TabIndex = 4;
             this.textBox1.Text = "                                                                                P" +
     "HẦN MỀM TÍNH TIỀN VÀ QUẢN LÝ CỬA HÀNG H&N";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -123,9 +126,11 @@
             // 
             // frmDangNhap
             // 
+            this.AcceptButton = this.btnDangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.CancelButton = this.btnHuy;
             this.ClientSize = new System.Drawing.Size(520, 281);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox1);
@@ -137,6 +142,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

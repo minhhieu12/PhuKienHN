@@ -16,5 +16,10 @@ namespace PHUKIENHN
         {
             InitializeComponent();
         }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

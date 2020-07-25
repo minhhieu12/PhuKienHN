@@ -11,7 +11,7 @@ namespace PHUKIENHN.Class
     class XULYBANG: DataTable
     {
         #region Fields
-        public static string cnnStr = "Data Source=.;Initial Catalog=PHUKIENHN;Integrated Security=True";
+        public static string cnnStr = "Data Source=NGHIAPH\\SQLEXPRESS;Initial Catalog=PHUKIENHN;Integrated Security=True";
         private static SqlConnection _cnn;
         private SqlDataAdapter _da = new SqlDataAdapter();
         private string _query;
@@ -51,7 +51,7 @@ namespace PHUKIENHN.Class
         public void docBang()
         {
             if (_query == null)
-                _query = "Select * from" + _name;
+                _query = "Select * from " + _name;
             if (_cnn == null)
                 _cnn = new SqlConnection(cnnStr);
             try
