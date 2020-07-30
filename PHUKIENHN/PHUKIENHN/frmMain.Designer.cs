@@ -53,7 +53,6 @@
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.btnCaLV = new DevExpress.XtraBars.BarButtonItem();
             this.btnDSSP = new DevExpress.XtraBars.BarButtonItem();
             this.tabform = new System.Windows.Forms.TabControl();
@@ -229,8 +228,7 @@
             this.ribbonPageGroup6,
             this.ribbonPageGroup7,
             this.ribbonPageGroup8,
-            this.ribbonPageGroup4,
-            this.ribbonPageGroup3});
+            this.ribbonPageGroup4});
             this.ribbonPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage1.ImageOptions.Image")));
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Sử dụng phần mềm";
@@ -281,11 +279,6 @@
             this.ribbonPageGroup4.ItemLinks.Add(this.btnThoat);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Chức năng khác";
-            // 
-            // ribbonPageGroup3
-            // 
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "ribbonPageGroup3";
             // 
             // btnCaLV
             // 
@@ -359,7 +352,6 @@
         private System.Windows.Forms.TabControl tabform;
         private DevExpress.XtraBars.BarButtonItem btnDangXuat;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
     }
 }
 
