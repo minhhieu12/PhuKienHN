@@ -9,18 +9,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PHUKIENHN.Class;
+using PHUKIENHN.DAO;
 
 namespace PHUKIENHN
 {
     public partial class frmMain : Form
     {
-        string LTK, UserName, PassWord;
-        public frmMain(string _LTK, string _UserName, string _PassWord)
+        string UserName, PassWord;
+        public frmMain(string _UserName, string _PassWord)
         {
             InitializeComponent();
-            this.LTK = _LTK;
             this.PassWord = _PassWord;
             this.UserName = _UserName;
+        }
+
+        public frmMain()
+        {
         }
 
         private void btnThoat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -50,12 +54,11 @@ namespace PHUKIENHN
             }
         }
 
-
-        
-
-        public void enableControl()
+        public void enableControl(string userName)
         {
-            switch (this.LTK.Trim())
+            string rankAccount = RankDAO.Instace.RankAccount(userName);
+
+            switch (rankAccount.Trim())
             {
                 
                 case "Bán hàng":
@@ -130,9 +133,10 @@ namespace PHUKIENHN
             }
         }
 
+
         private void frmMain_Load(object sender, EventArgs e)
         {
-            enableControl();
+            enableControl(UserName);
             this.IsMdiContainer = true;
             
         }
