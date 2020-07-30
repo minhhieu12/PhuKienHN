@@ -75,6 +75,10 @@
     <Compile Include="Class\XULYBANG.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DAO\ChangePasswordDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\LoginDAO.cs" />
+    <Compile Include="DAO\RankDAO.cs" />
     <Compile Include="frmCapNhatHD.cs">
       <SubType>Form</SubType>
     </Compile>

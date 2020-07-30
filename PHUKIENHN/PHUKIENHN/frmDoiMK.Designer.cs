@@ -68,7 +68,7 @@
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnCapNhat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCapNhat.ImageOptions.Image")));
             this.btnCapNhat.Location = new System.Drawing.Point(65, 111);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(95, 37);
@@ -79,7 +79,7 @@
             // btnHuy
             // 
             this.btnHuy.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnHuy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btnHuy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.ImageOptions.Image")));
             this.btnHuy.Location = new System.Drawing.Point(192, 111);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(95, 37);
@@ -129,6 +129,7 @@
             this.Name = "frmDoiMK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đổi mật khẩu";
+            this.Load += new System.EventHandler(this.frmDoiMK_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

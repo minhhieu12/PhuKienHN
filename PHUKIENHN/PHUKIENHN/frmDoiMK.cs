@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PHUKIENHN.Class;
-
+using PHUKIENHN.DAO;
 
 namespace PHUKIENHN
 {
@@ -29,39 +29,36 @@ namespace PHUKIENHN
         }
 
         XLBANG_NHANVIEN tblNhanVien;
+
+        private void frmDoiMK_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
             tblNhanVien = new XLBANG_NHANVIEN();
-            string strErr = string.Empty;
-            string strMatKhauCu = txtMKCu.Text.Trim();
-            string strMatKhauMoi = txtMKMoi.Text.Trim();
-            string strNhapLaiMatKhauMoi = txtNLMKMoi.Text.Trim();
 
-            if (strMatKhauCu == string.Empty || strMatKhauMoi == string.Empty || strNhapLaiMatKhauMoi == string.Empty)
-                strErr = "Mật khẩu vui lòng không được bỏ trống!";
-            else if (strMatKhauMoi != strNhapLaiMatKhauMoi)
-                strErr = "Mật khẩu mới đã nhập không trùng nhau!";
-            else if (strMatKhauMoi == strMatKhauCu)
-                strErr = "Mật khẩu mới không được trùng với mật khẩu cũ!";
-            else if (PassWord != strMatKhauCu)
-                strErr = "Mật khẩu cũ sai!";
+            string oldPassword = txtMKCu.Text.Trim();
+            string newPassword = txtMKMoi.Text.Trim();
+            string confirmNewPassword = txtNLMKMoi.Text.Trim();
+
+            string strErr = ChangePasswordDAO.Instance.CheckError(PassWord, oldPassword, newPassword, confirmNewPassword);
 
             if (strErr != string.Empty)
             {
                 MessageBox.Show(strErr);
                 return;
-            } else
-            {
-                int count = XULYBANG.TruyVan("UPDATE NHANVIEN SET MATKHAU = '" + strMatKhauMoi + "' WHERE TENDN = '" + UserName + "'");
-                
-                if (count > 0)
-                {
-                    MessageBox.Show("Đổi mật khẩu thành công!");
-                    this.Close();
-                }
-                    
-                else MessageBox.Show("Failed!");
             }
+                
+            if (ChangePasswordDAO.Instance.checkChangePassword(UserName, newPassword))
+            {
+                MessageBox.Show("Đổi mật khẩu thành công!");
+                this.Close();
+            }
+                    
+            else MessageBox.Show("Failed!");
+            
         }
     }
 }
