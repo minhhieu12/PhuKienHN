@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTaoHD));
             this.gbTTHoaDon = new System.Windows.Forms.GroupBox();
             this.dateNGAY = new System.Windows.Forms.DateTimePicker();
-            this.txtTENNV = new System.Windows.Forms.TextBox();
+            this.cbTENNV = new System.Windows.Forms.ComboBox();
             this.txtMANV = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtSDT = new System.Windows.Forms.TextBox();
@@ -49,8 +49,8 @@
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnTHEMMH = new DevExpress.XtraEditors.SimpleButton();
-            this.cboMAHH = new System.Windows.Forms.ComboBox();
-            this.txtTENHH = new System.Windows.Forms.TextBox();
+            this.cboTENHH = new System.Windows.Forms.ComboBox();
+            this.txtMAHH = new System.Windows.Forms.TextBox();
             this.txtTHANHTIEN = new System.Windows.Forms.TextBox();
             this.txtGIAMGIA = new System.Windows.Forms.TextBox();
             this.txtSL = new System.Windows.Forms.TextBox();
@@ -84,7 +84,7 @@
             // gbTTHoaDon
             // 
             this.gbTTHoaDon.Controls.Add(this.dateNGAY);
-            this.gbTTHoaDon.Controls.Add(this.txtTENNV);
+            this.gbTTHoaDon.Controls.Add(this.cbTENNV);
             this.gbTTHoaDon.Controls.Add(this.txtMANV);
             this.gbTTHoaDon.Controls.Add(this.label4);
             this.gbTTHoaDon.Controls.Add(this.txtSDT);
@@ -115,19 +115,22 @@
             this.dateNGAY.Size = new System.Drawing.Size(155, 22);
             this.dateNGAY.TabIndex = 2;
             // 
-            // txtTENNV
+            // cbTENNV
             // 
-            this.txtTENNV.Location = new System.Drawing.Point(114, 108);
-            this.txtTENNV.Name = "txtTENNV";
-            this.txtTENNV.Size = new System.Drawing.Size(155, 22);
-            this.txtTENNV.TabIndex = 1;
+            this.cbTENNV.FormattingEnabled = true;
+            this.cbTENNV.Location = new System.Drawing.Point(114, 104);
+            this.cbTENNV.Name = "cbTENNV";
+            this.cbTENNV.Size = new System.Drawing.Size(155, 24);
+            this.cbTENNV.TabIndex = 3;
+            this.cbTENNV.SelectedIndexChanged += new System.EventHandler(this.cbTENNV_SelectedIndexChanged);
             // 
             // txtMANV
             // 
-            this.txtMANV.Location = new System.Drawing.Point(114, 80);
+            this.txtMANV.Location = new System.Drawing.Point(114, 77);
             this.txtMANV.Name = "txtMANV";
             this.txtMANV.Size = new System.Drawing.Size(155, 22);
             this.txtMANV.TabIndex = 1;
+            this.txtMANV.TextChanged += new System.EventHandler(this.txtMANV_TextChanged);
             // 
             // label4
             // 
@@ -248,6 +251,7 @@
             // 
             // btnThoat
             // 
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
             this.btnThoat.Location = new System.Drawing.Point(980, 445);
             this.btnThoat.Name = "btnThoat";
@@ -259,8 +263,8 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnTHEMMH);
-            this.groupBox2.Controls.Add(this.cboMAHH);
-            this.groupBox2.Controls.Add(this.txtTENHH);
+            this.groupBox2.Controls.Add(this.cboTENHH);
+            this.groupBox2.Controls.Add(this.txtMAHH);
             this.groupBox2.Controls.Add(this.txtTHANHTIEN);
             this.groupBox2.Controls.Add(this.txtGIAMGIA);
             this.groupBox2.Controls.Add(this.txtSL);
@@ -290,20 +294,21 @@
             this.btnTHEMMH.TabIndex = 9;
             this.btnTHEMMH.Text = "Thêm mặt hàng";
             // 
-            // cboMAHH
+            // cboTENHH
             // 
-            this.cboMAHH.FormattingEnabled = true;
-            this.cboMAHH.Location = new System.Drawing.Point(72, 19);
-            this.cboMAHH.Name = "cboMAHH";
-            this.cboMAHH.Size = new System.Drawing.Size(155, 24);
-            this.cboMAHH.TabIndex = 3;
+            this.cboTENHH.FormattingEnabled = true;
+            this.cboTENHH.Location = new System.Drawing.Point(72, 48);
+            this.cboTENHH.Name = "cboTENHH";
+            this.cboTENHH.Size = new System.Drawing.Size(155, 24);
+            this.cboTENHH.TabIndex = 3;
+            this.cboTENHH.SelectedIndexChanged += new System.EventHandler(this.cboTENHH_SelectedIndexChanged);
             // 
-            // txtTENHH
+            // txtMAHH
             // 
-            this.txtTENHH.Location = new System.Drawing.Point(72, 49);
-            this.txtTENHH.Name = "txtTENHH";
-            this.txtTENHH.Size = new System.Drawing.Size(155, 22);
-            this.txtTENHH.TabIndex = 1;
+            this.txtMAHH.Location = new System.Drawing.Point(72, 21);
+            this.txtMAHH.Name = "txtMAHH";
+            this.txtMAHH.Size = new System.Drawing.Size(155, 22);
+            this.txtMAHH.TabIndex = 1;
             // 
             // txtTHANHTIEN
             // 
@@ -311,6 +316,7 @@
             this.txtTHANHTIEN.Name = "txtTHANHTIEN";
             this.txtTHANHTIEN.Size = new System.Drawing.Size(155, 22);
             this.txtTHANHTIEN.TabIndex = 1;
+            this.txtTHANHTIEN.TextChanged += new System.EventHandler(this.txtTHANHTIEN_TextChanged);
             // 
             // txtGIAMGIA
             // 
@@ -318,6 +324,7 @@
             this.txtGIAMGIA.Name = "txtGIAMGIA";
             this.txtGIAMGIA.Size = new System.Drawing.Size(155, 22);
             this.txtGIAMGIA.TabIndex = 1;
+            this.txtGIAMGIA.TextChanged += new System.EventHandler(this.txtGIAMGIA_TextChanged);
             // 
             // txtSL
             // 
@@ -325,6 +332,7 @@
             this.txtSL.Name = "txtSL";
             this.txtSL.Size = new System.Drawing.Size(155, 22);
             this.txtSL.TabIndex = 1;
+            this.txtSL.TextChanged += new System.EventHandler(this.txtSL_TextChanged);
             // 
             // label12
             // 
@@ -475,6 +483,7 @@
             this.btnTHEMHD.Size = new System.Drawing.Size(140, 36);
             this.btnTHEMHD.TabIndex = 9;
             this.btnTHEMHD.Text = "Thêm hoá đơn";
+            this.btnTHEMHD.Click += new System.EventHandler(this.btnTHEMHD_Click);
             // 
             // btnLUU
             // 
@@ -497,6 +506,7 @@
             this.btnHUY.Size = new System.Drawing.Size(140, 36);
             this.btnHUY.TabIndex = 9;
             this.btnHUY.Text = "Huỷ hoá đơn";
+            this.btnHUY.Click += new System.EventHandler(this.btnHUY_Click);
             // 
             // btnIN
             // 
@@ -512,9 +522,11 @@
             // 
             // frmTaoHD
             // 
+            this.AcceptButton = this.btnTHEMMH;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.CancelButton = this.btnThoat;
             this.ClientSize = new System.Drawing.Size(1081, 492);
             this.Controls.Add(this.btnIN);
             this.Controls.Add(this.btnHUY);
@@ -529,6 +541,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmTaoHD";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmTaoHD_Load);
             this.gbTTHoaDon.ResumeLayout(false);
             this.gbTTHoaDon.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -548,10 +561,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtMANV;
         private System.Windows.Forms.Label label3;
         private DevExpress.XtraEditors.SimpleButton btnThoat;
-        private System.Windows.Forms.TextBox txtTENNV;
+        private System.Windows.Forms.TextBox txtMANV;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.TextBox txtDIACHI;
@@ -561,8 +573,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox2;
         private DevExpress.XtraEditors.SimpleButton btnTHEMMH;
-        private System.Windows.Forms.ComboBox cboMAHH;
-        private System.Windows.Forms.TextBox txtTENHH;
+        private System.Windows.Forms.ComboBox cboTENHH;
+        private System.Windows.Forms.TextBox txtMAHH;
         private System.Windows.Forms.TextBox txtTHANHTIEN;
         private System.Windows.Forms.TextBox txtGIAMGIA;
         private System.Windows.Forms.TextBox txtSL;
@@ -588,5 +600,6 @@
         private DevExpress.XtraEditors.SimpleButton btnLUU;
         private DevExpress.XtraEditors.SimpleButton btnHUY;
         private DevExpress.XtraEditors.SimpleButton btnIN;
+        private System.Windows.Forms.ComboBox cbTENNV;
     }
 }

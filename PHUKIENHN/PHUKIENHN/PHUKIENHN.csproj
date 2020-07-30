@@ -83,6 +83,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="DAO\ChangePasswordDAO.cs" />
+    <Compile Include="DAO\CreateInvoicesDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\LoginDAO.cs" />
     <Compile Include="DAO\RankDAO.cs" />
