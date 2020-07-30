@@ -44,7 +44,7 @@
             this.THANHTIEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SUA = new System.Windows.Forms.DataGridViewButtonColumn();
             this.XOA = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -77,12 +77,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.gbTTHoaDon.SuspendLayout();
@@ -205,30 +205,32 @@
             this.XOA.Name = "XOA";
             this.XOA.Text = "Xoá";
             // 
-            // simpleButton3
+            // btnThoat
             // 
-            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(980, 445);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(86, 35);
-            this.simpleButton3.TabIndex = 14;
-            this.simpleButton3.Text = "Đóng";
+            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.btnThoat.Location = new System.Drawing.Point(979, 447);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(86, 35);
+            this.btnThoat.TabIndex = 14;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // textBox5
             // 
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.Location = new System.Drawing.Point(874, 419);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(192, 20);
+            this.textBox5.Size = new System.Drawing.Size(192, 22);
             this.textBox5.TabIndex = 13;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(787, 422);
+            this.label7.Location = new System.Drawing.Point(766, 422);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 13);
+            this.label7.Size = new System.Drawing.Size(102, 16);
             this.label7.TabIndex = 10;
             this.label7.Text = "TỔNG CỘNG:";
             // 
@@ -532,15 +534,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm hoá đơn";
             // 
-            // label5
+            // simpleButton1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 26);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 16);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Số hoá đơn:";
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(720, 14);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(157, 36);
+            this.simpleButton1.TabIndex = 9;
+            this.simpleButton1.Text = "Tìm kiếm hoá đơn";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(531, 20);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(155, 22);
+            this.textBox3.TabIndex = 1;
             // 
             // textBox2
             // 
@@ -548,16 +558,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(155, 22);
             this.textBox2.TabIndex = 1;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(298, 26);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 16);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Hoặc";
             // 
             // label8
             // 
@@ -569,23 +569,25 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Số điện thoại khách hàng:";
             // 
-            // textBox3
+            // label6
             // 
-            this.textBox3.Location = new System.Drawing.Point(531, 20);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(155, 22);
-            this.textBox3.TabIndex = 1;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(298, 26);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 16);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Hoặc";
             // 
-            // simpleButton1
+            // label5
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(720, 14);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(157, 36);
-            this.simpleButton1.TabIndex = 9;
-            this.simpleButton1.Text = "Tìm kiếm hoá đơn";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 26);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 16);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Số hoá đơn:";
             // 
             // frmCapNhatHD
             // 
@@ -598,7 +600,7 @@
             this.Controls.Add(this.simpleButton4);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.simpleButton3);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox2);
@@ -635,7 +637,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn THANHTIEN;
         private System.Windows.Forms.DataGridViewButtonColumn SUA;
         private System.Windows.Forms.DataGridViewButtonColumn XOA;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton btnThoat;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox2;

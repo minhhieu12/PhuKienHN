@@ -33,6 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Sparkline.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -43,6 +48,8 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -79,6 +86,11 @@
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\LoginDAO.cs" />
     <Compile Include="DAO\RankDAO.cs" />
+    <Compile Include="dsHOADON.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsHOADON.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmCapNhatHD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +126,12 @@
     </Compile>
     <Compile Include="frmDSNV.Designer.cs">
       <DependentUpon>frmDSNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmINHOADON.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmINHOADON.Designer.cs">
+      <DependentUpon>frmINHOADON.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -153,6 +171,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rptHOADON.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptHOADON.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="frmCapNhatHD.resx">
       <DependentUpon>frmCapNhatHD.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDSNV.resx">
       <DependentUpon>frmDSNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmINHOADON.resx">
+      <DependentUpon>frmINHOADON.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -199,6 +226,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="rptHOADON.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptHOADON.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="dsHOADON.xsc">
+      <DependentUpon>dsHOADON.xsd</DependentUpon>
+    </None>
+    <None Include="dsHOADON.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsHOADON.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsHOADON.xss">
+      <DependentUpon>dsHOADON.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -211,6 +253,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

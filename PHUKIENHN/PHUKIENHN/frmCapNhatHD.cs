@@ -23,5 +23,6 @@ namespace PHUKIENHN
             TabControl tabMain = (TabControl)p.Parent;
             tabMain.TabPages.Remove(p);
         }
+
     }
 }

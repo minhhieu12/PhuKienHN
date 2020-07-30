@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PHUKIENHN.DAO;
 
 namespace PHUKIENHN
 {
@@ -22,6 +23,19 @@ namespace PHUKIENHN
             TabPage p = (TabPage)this.Parent;
             TabControl tabMain = (TabControl)p.Parent;
             tabMain.TabPages.Remove(p);
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            TabPage p = (TabPage)this.Parent;
+            TabControl tabMain = (TabControl)p.Parent;
+            tabMain.TabPages.Remove(p);
+        }
+
+        private void btnIN_Click(object sender, EventArgs e)
+        {
+            frmINHOADON FrmINHD = new frmINHOADON();
+            FrmINHD.ShowDialog();
         }
     }
 }
