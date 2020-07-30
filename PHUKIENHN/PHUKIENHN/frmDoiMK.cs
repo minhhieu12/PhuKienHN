@@ -43,11 +43,9 @@ namespace PHUKIENHN
             string newPassword = txtMKMoi.Text.Trim();
             string confirmNewPassword = txtNLMKMoi.Text.Trim();
 
-            string strErr = ChangePasswordDAO.Instance.CheckError(PassWord, oldPassword, newPassword, confirmNewPassword);
-
-            if (strErr != string.Empty)
+            if (ChangePasswordDAO.Instance.CheckError(PassWord, oldPassword, newPassword, confirmNewPassword) != string.Empty)
             {
-                MessageBox.Show(strErr);
+                MessageBox.Show(ChangePasswordDAO.Instance.CheckError(PassWord, oldPassword, newPassword, confirmNewPassword));
                 return;
             }
                 
