@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.ClipboardSource.SpreadsheetML;
+using DevExpress.XtraEditors.Filtering.Templates;
 using PHUKIENHN.DAO;
 
 namespace PHUKIENHN
 {
     public partial class frmTaoHD : Form
     {
+        int i = 0, tongTien = 0;
         public frmTaoHD()
         {
             InitializeComponent();
@@ -41,7 +44,19 @@ namespace PHUKIENHN
         private void frmTaoHD_Load(object sender, EventArgs e)
         {
             this.loadCBTENNV();
+
             this.loadCBTENHH();
+            /*
+            txtSOHD.Enabled = false;
+
+            txtMANV.Enabled = false;
+
+            txtMAHH.Enabled = false;
+
+            txtTENKH.Enabled = false;
+
+            txtDONGIA.Enabled = false;
+            */
         }
 
         private void loadCBTENNV()
@@ -99,11 +114,13 @@ namespace PHUKIENHN
             {
                 txtMAHH.Text = data.Rows[0]["MASP"].ToString();
 
-                
-
                 txtDONGIA.Text = data.Rows[0]["DONGIA"].ToString();
 
                 txtGIAMGIA.Text = "0";
+
+                txtSL.Text = "1";
+
+                txtTHANHTIEN.Text = tinhTien().ToString();
             }
         }
 
@@ -154,6 +171,126 @@ namespace PHUKIENHN
             txtSOHD.Text = CreateInvoicesDAO.Instance.maHoaDon();
         }
 
-        
+        private void dgvHOADONBANHANG_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex == 9 && e.RowIndex < dgvHOADONBANHANG.Rows.Count - 1)
+            {
+                string str = dgvHOADONBANHANG.Rows[e.RowIndex].Cells[7].Value.ToString();
+
+                int value = int.Parse(str);
+
+                tongTien -= value;
+
+                txtTONGCONG.Text = tongTien.ToString() + " VND";
+
+                dgvHOADONBANHANG.Rows.RemoveAt(e.RowIndex);
+
+                foreach (DataGridViewRow r in dgvHOADONBANHANG.Rows)
+                {
+                    if (dgvHOADONBANHANG.Rows.Count > r.Index + 1)
+                    {
+                        r.Cells[0].Value = r.Index + 1;
+                    }
+                    i = r.Index;
+                }
+            }
+
+            if (e.RowIndex >= 0 && e.ColumnIndex == 8 && e.RowIndex < dgvHOADONBANHANG.Rows.Count - 1)
+            {
+                cboTENHH.SelectedValue = dgvHOADONBANHANG.Rows[e.RowIndex].Cells[2].Value.ToString();
+
+                txtSL.Text = dgvHOADONBANHANG.Rows[e.RowIndex].Cells[4].Value.ToString();
+            }
+        }
+
+        private void btnLUU_Click(object sender, EventArgs e)
+        {
+            if (dgvHOADONBANHANG.Rows.Count == 1)
+            {
+                MessageBox.Show("Chưa có mặt hàng nào được thêm vào hóa đơn!");
+            }
+            else if (txtMANV.Text.ToString() == string.Empty)
+            {
+                MessageBox.Show("Vui lòng chọn tên nhân viên bán hàng!");
+            } 
+            else if (txtTENKH.Text.ToString() == string.Empty)
+            {
+                MessageBox.Show("Vui lòng nhập tên khách hàng!");
+            }
+            else if (txtSDT.Text.ToString() == string.Empty)
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại của khách hàng!");
+            }
+            else
+            {
+                string soHD = txtSOHD.Text.ToString();
+
+                string dt = dateNGAY.Value.ToString("yyyy-MM-dd");
+
+                string tenKhachHang = txtTENKH.Text.ToString();
+
+                string diaChi = txtDIACHI.Text.ToString();
+
+                string sdt = txtSDT.Text.ToString();
+
+                string queryToHoaDon = string.Format("INSERT INTO HOADON (SOHD, NGAYTAO, TONGTIEN, TENKH, DIACHI, SDT) VALUES ('{0}', '{1}', {2}, N'{3}', N'{4}', '{5}')", soHD, dt, tongTien, tenKhachHang, diaChi, sdt);
+
+                DataProvider.Instance.ExecuteNonQuery(queryToHoaDon);
+
+
+                foreach (DataGridViewRow r in dgvHOADONBANHANG.Rows)
+                {
+                    if (r.Cells[1].Value != null)
+                    {
+                        string maHangHoa = r.Cells[1].Value.ToString();
+
+                        int soLuong = Convert.ToInt32(r.Cells[4].Value);
+
+                        int donGia = Convert.ToInt32(r.Cells[5].Value);
+
+                        int chietKhau = Convert.ToInt32(r.Cells[6].Value);
+
+                        int tongTien = Convert.ToInt32(r.Cells[7].Value);
+
+                        string queryToChiTietHoaDon = string.Format("INSERT INTO CTHOADON (SOHD, MASP, SOLUONG, DONGIA, CHIETKHAU, THANHTIEN) VALUES ('{0}', '{1}', {2}, {3}, {4}, {5})", soHD, maHangHoa, soLuong, donGia, chietKhau, tongTien);
+
+                        DataProvider.Instance.ExecuteNonQuery(queryToChiTietHoaDon);
+                    }
+                }
+                MessageBox.Show("Đã thêm hóa đơn!!!");
+            }
+        }
+
+        private void gbTTHoaDon_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTHEMMH_Click(object sender, EventArgs e)
+        {
+            if (txtMAHH.Text.ToString() == string.Empty)
+            {
+                MessageBox.Show("Vui lòng chọn tên một loại hàng hóa!");
+            }
+            else
+            {
+                tongTien += tinhTien();
+
+                this.dgvHOADONBANHANG.Rows.Add("", txtMAHH.Text.ToString(), cboTENHH.SelectedValue.ToString(), "Cái", txtSL.Text.ToString(), txtDONGIA.Text.ToString(), txtGIAMGIA.Text.ToString(), txtTHANHTIEN.Text.ToString());
+
+                txtTONGCONG.Text = tongTien.ToString() + " VND";
+
+                foreach (DataGridViewRow r in dgvHOADONBANHANG.Rows)
+                {
+
+                    if (dgvHOADONBANHANG.Rows.Count > r.Index + 1)
+                    {
+                        r.Cells[0].Value = r.Index + 1;
+
+                        i = r.Index;
+                    }
+                }
+            }
+        }
     }
 }

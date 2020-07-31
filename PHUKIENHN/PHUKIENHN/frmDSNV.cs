@@ -136,7 +136,7 @@ namespace PHUKIENHN
             catch(Exception ex)
             {
                 tblNHANVIEN.RejectChanges();
-                MessageBox.Show("Không thể xoá nhân viên!");
+                MessageBox.Show(ex.ToString());
             }
         }
 
