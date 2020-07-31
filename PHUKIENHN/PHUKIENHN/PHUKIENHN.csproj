@@ -202,13 +202,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Class\XUATEXCEL.cs" />
     <Compile Include="rptHOADON.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptHOADON.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Class\XUATEXCEL.cs" />
     <Compile Include="rptNHANVIEN.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

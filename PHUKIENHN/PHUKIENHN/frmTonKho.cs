@@ -72,7 +72,7 @@ namespace PHUKIENHN
         private void txtTIMKIEM_TextChanged(object sender, EventArgs e)
         {
             string TENHH = txtTIMKIEM.Text.ToString();
-            string query = string.Format("SELECT * FROM SANPHAM WHERE TENSP LIKE N'%{0}%'", TENHH);
+            string query = string.Format("SELECT * FROM SANPHAM WHERE TENSP LIKE N{0}%'", TENHH);
             DataTable sanpham = DataProvider.Instance.ExecuteQuery(query);
             dgvTonKho.DataSource = sanpham;
         }
