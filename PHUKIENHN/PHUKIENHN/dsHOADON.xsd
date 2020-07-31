@@ -9,34 +9,33 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="PHUKIENHNConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="PHUKIENHNConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        KHACHHANG.MAKH, KHACHHANG.TENKH, KHACHHANG.DIACHI, KHACHHANG.SDT, HOADON.SOHD, HOADON.NGAYTAO, CTHOADON.MASP, CTHOADON.DONGIA, CTHOADON.SOLUONG, CTHOADON.CHIETKHAU, 
-                         CTHOADON.THANHTIEN, SANPHAM.TENSP, dbo.fu_TINHTONGHOADON(CTHOADON.SOHD) AS TONGTIEN
+                    <CommandText>SELECT        HOADON.SOHD, HOADON.NGAYTAO, HOADON.TONGTIEN, HOADON.TENKH, HOADON.DIACHI, HOADON.SDT, CTHOADON.MASP, SANPHAM.TENSP, CTHOADON.SOLUONG, CTHOADON.DONGIA, CTHOADON.CHIETKHAU, 
+                         CTHOADON.THANHTIEN
 FROM            CTHOADON INNER JOIN
                          HOADON ON CTHOADON.SOHD = HOADON.SOHD INNER JOIN
-                         KHACHHANG ON HOADON.MAKH = KHACHHANG.MAKH INNER JOIN
-                         SANPHAM ON CTHOADON.MASP = SANPHAM.MASP</CommandText>
+                         SANPHAM ON CTHOADON.MASP = SANPHAM.MASP
+WHERE        (HOADON.SDT = '0123456789')</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="MAKH" DataSetColumn="MAKH" />
+              <Mapping SourceColumn="SOHD" DataSetColumn="SOHD" />
+              <Mapping SourceColumn="NGAYTAO" DataSetColumn="NGAYTAO" />
+              <Mapping SourceColumn="TONGTIEN" DataSetColumn="TONGTIEN" />
               <Mapping SourceColumn="TENKH" DataSetColumn="TENKH" />
               <Mapping SourceColumn="DIACHI" DataSetColumn="DIACHI" />
               <Mapping SourceColumn="SDT" DataSetColumn="SDT" />
-              <Mapping SourceColumn="SOHD" DataSetColumn="SOHD" />
-              <Mapping SourceColumn="NGAYTAO" DataSetColumn="NGAYTAO" />
               <Mapping SourceColumn="MASP" DataSetColumn="MASP" />
-              <Mapping SourceColumn="DONGIA" DataSetColumn="DONGIA" />
+              <Mapping SourceColumn="TENSP" DataSetColumn="TENSP" />
               <Mapping SourceColumn="SOLUONG" DataSetColumn="SOLUONG" />
+              <Mapping SourceColumn="DONGIA" DataSetColumn="DONGIA" />
               <Mapping SourceColumn="CHIETKHAU" DataSetColumn="CHIETKHAU" />
               <Mapping SourceColumn="THANHTIEN" DataSetColumn="THANHTIEN" />
-              <Mapping SourceColumn="TENSP" DataSetColumn="TENSP" />
-              <Mapping SourceColumn="TONGTIEN" DataSetColumn="TONGTIEN" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -48,37 +47,9 @@ FROM            CTHOADON INNER JOIN
   <xs:element name="dsHOADON" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsHOADON" msprop:Generator_UserDSName="dsHOADON">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="MAKH" msprop:Generator_ColumnVarNameInTable="columnMAKH" msprop:Generator_ColumnPropNameInRow="MAKH" msprop:Generator_ColumnPropNameInTable="MAKHColumn" msprop:Generator_UserColumnName="MAKH">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="TENKH" msprop:Generator_ColumnVarNameInTable="columnTENKH" msprop:Generator_ColumnPropNameInRow="TENKH" msprop:Generator_ColumnPropNameInTable="TENKHColumn" msprop:Generator_UserColumnName="TENKH">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="DIACHI" msprop:Generator_ColumnVarNameInTable="columnDIACHI" msprop:Generator_ColumnPropNameInRow="DIACHI" msprop:Generator_ColumnPropNameInTable="DIACHIColumn" msprop:Generator_UserColumnName="DIACHI" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="30" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="SDT" msprop:Generator_ColumnVarNameInTable="columnSDT" msprop:Generator_ColumnPropNameInRow="SDT" msprop:Generator_ColumnPropNameInTable="SDTColumn" msprop:Generator_UserColumnName="SDT">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
               <xs:element name="SOHD" msprop:Generator_ColumnVarNameInTable="columnSOHD" msprop:Generator_ColumnPropNameInRow="SOHD" msprop:Generator_ColumnPropNameInTable="SOHDColumn" msprop:Generator_UserColumnName="SOHD">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -87,6 +58,28 @@ FROM            CTHOADON INNER JOIN
                 </xs:simpleType>
               </xs:element>
               <xs:element name="NGAYTAO" msprop:Generator_ColumnVarNameInTable="columnNGAYTAO" msprop:Generator_ColumnPropNameInRow="NGAYTAO" msprop:Generator_ColumnPropNameInTable="NGAYTAOColumn" msprop:Generator_UserColumnName="NGAYTAO" type="xs:dateTime" />
+              <xs:element name="TONGTIEN" msprop:Generator_ColumnVarNameInTable="columnTONGTIEN" msprop:Generator_ColumnPropNameInRow="TONGTIEN" msprop:Generator_ColumnPropNameInTable="TONGTIENColumn" msprop:Generator_UserColumnName="TONGTIEN" type="xs:int" />
+              <xs:element name="TENKH" msprop:Generator_ColumnVarNameInTable="columnTENKH" msprop:Generator_ColumnPropNameInRow="TENKH" msprop:Generator_ColumnPropNameInTable="TENKHColumn" msprop:Generator_UserColumnName="TENKH">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DIACHI" msprop:Generator_ColumnVarNameInTable="columnDIACHI" msprop:Generator_ColumnPropNameInRow="DIACHI" msprop:Generator_ColumnPropNameInTable="DIACHIColumn" msprop:Generator_UserColumnName="DIACHI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SDT" msprop:Generator_ColumnVarNameInTable="columnSDT" msprop:Generator_ColumnPropNameInRow="SDT" msprop:Generator_ColumnPropNameInTable="SDTColumn" msprop:Generator_UserColumnName="SDT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="MASP" msprop:Generator_ColumnVarNameInTable="columnMASP" msprop:Generator_ColumnPropNameInRow="MASP" msprop:Generator_ColumnPropNameInTable="MASPColumn" msprop:Generator_UserColumnName="MASP">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -94,10 +87,6 @@ FROM            CTHOADON INNER JOIN
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="DONGIA" msprop:Generator_ColumnVarNameInTable="columnDONGIA" msprop:Generator_ColumnPropNameInRow="DONGIA" msprop:Generator_ColumnPropNameInTable="DONGIAColumn" msprop:Generator_UserColumnName="DONGIA" type="xs:decimal" />
-              <xs:element name="SOLUONG" msprop:Generator_ColumnVarNameInTable="columnSOLUONG" msprop:Generator_ColumnPropNameInRow="SOLUONG" msprop:Generator_ColumnPropNameInTable="SOLUONGColumn" msprop:Generator_UserColumnName="SOLUONG" type="xs:int" />
-              <xs:element name="CHIETKHAU" msprop:Generator_ColumnVarNameInTable="columnCHIETKHAU" msprop:Generator_ColumnPropNameInRow="CHIETKHAU" msprop:Generator_ColumnPropNameInTable="CHIETKHAUColumn" msprop:Generator_UserColumnName="CHIETKHAU" type="xs:decimal" />
-              <xs:element name="THANHTIEN" msprop:Generator_ColumnVarNameInTable="columnTHANHTIEN" msprop:Generator_ColumnPropNameInRow="THANHTIEN" msprop:Generator_ColumnPropNameInTable="THANHTIENColumn" msprop:Generator_UserColumnName="THANHTIEN" type="xs:decimal" />
               <xs:element name="TENSP" msprop:Generator_ColumnVarNameInTable="columnTENSP" msprop:Generator_ColumnPropNameInRow="TENSP" msprop:Generator_ColumnPropNameInTable="TENSPColumn" msprop:Generator_UserColumnName="TENSP">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -105,7 +94,10 @@ FROM            CTHOADON INNER JOIN
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TONGTIEN" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTONGTIEN" msprop:Generator_ColumnPropNameInRow="TONGTIEN" msprop:Generator_ColumnPropNameInTable="TONGTIENColumn" msprop:Generator_UserColumnName="TONGTIEN" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SOLUONG" msprop:Generator_ColumnVarNameInTable="columnSOLUONG" msprop:Generator_ColumnPropNameInRow="SOLUONG" msprop:Generator_ColumnPropNameInTable="SOLUONGColumn" msprop:Generator_UserColumnName="SOLUONG" type="xs:int" />
+              <xs:element name="DONGIA" msprop:Generator_ColumnVarNameInTable="columnDONGIA" msprop:Generator_ColumnPropNameInRow="DONGIA" msprop:Generator_ColumnPropNameInTable="DONGIAColumn" msprop:Generator_UserColumnName="DONGIA" type="xs:int" />
+              <xs:element name="CHIETKHAU" msprop:Generator_ColumnVarNameInTable="columnCHIETKHAU" msprop:Generator_ColumnPropNameInRow="CHIETKHAU" msprop:Generator_ColumnPropNameInTable="CHIETKHAUColumn" msprop:Generator_UserColumnName="CHIETKHAU" type="xs:int" />
+              <xs:element name="THANHTIEN" msprop:Generator_ColumnVarNameInTable="columnTHANHTIEN" msprop:Generator_ColumnPropNameInRow="THANHTIEN" msprop:Generator_ColumnPropNameInTable="THANHTIENColumn" msprop:Generator_UserColumnName="THANHTIEN" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

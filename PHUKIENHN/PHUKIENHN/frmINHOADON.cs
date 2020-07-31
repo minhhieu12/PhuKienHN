@@ -21,12 +21,7 @@ namespace PHUKIENHN.DAO
 
         private void frmINHOADON_Load(object sender, EventArgs e)
         {
-            var query = "SELECT KHACHHANG.MAKH, KHACHHANG.TENKH, KHACHHANG.DIACHI, KHACHHANG.SDT, HOADON.SOHD, HOADON.NGAYTAO, CTHOADON.MASP, CTHOADON.DONGIA, CTHOADON.SOLUONG, CTHOADON.CHIETKHAU," +
-                        "CTHOADON.THANHTIEN, SANPHAM.TENSP, dbo.fu_TINHTONGHOADON(CTHOADON.SOHD) AS TONGTIEN" +
-                        "FROM CTHOADON INNER JOIN" +
-                        "HOADON ON CTHOADON.SOHD = HOADON.SOHD INNER JOIN" +
-                        "KHACHHANG ON HOADON.MAKH = KHACHHANG.MAKH INNER JOIN" +
-                        "SANPHAM ON CTHOADON.MASP = SANPHAM.MASP";
+            var query = "";
             SqlDataAdapter da = new SqlDataAdapter(query, DataProvider.Instance.connectionString);
             try
             {
