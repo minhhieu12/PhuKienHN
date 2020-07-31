@@ -49,9 +49,10 @@ namespace PHUKIENHN
 
         private void frmDSNV_Load(object sender, EventArgs e)
         {
-            
-            // TODO: This line of code loads data into the 'pHUKIENHNDataSet.NHANVIEN' table. You can move, or remove it, as needed.
-            this.nHANVIENTableAdapter.Fill(this.pHUKIENHNDataSet.NHANVIEN);
+            DataTable dt = DataProvider.Instance.ExecuteQuery("SELECT * FROM NHANVIEN");
+
+            dgvDSNV.DataSource = dt;
+
             tblNHANVIEN = new XLBANG_NHANVIEN();
             daNHANVIEN = new SqlDataAdapter("SELECT * FROM NHANVIEN", DataProvider.Instance.connectionString);
             try

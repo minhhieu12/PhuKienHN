@@ -259,8 +259,14 @@ namespace PHUKIENHN
                 }
                 MessageBox.Show("Đã thêm hóa đơn!!!");
             }
+            //disable button
+            btnLUU.Enabled = false;
+            btnHUY.Enabled = false;
+            btnTHEMMH.Enabled = false;
+            btnTHEMHD.Enabled = true;
         }
 
+        
         private void gbTTHoaDon_Enter(object sender, EventArgs e)
         {
 

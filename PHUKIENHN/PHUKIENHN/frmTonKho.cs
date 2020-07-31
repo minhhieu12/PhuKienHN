@@ -32,10 +32,8 @@ namespace PHUKIENHN
 
         private void frmTonKho_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'pHUKIENHNDataSet1.SANPHAM' table. You can move, or remove it, as needed.
-            this.sANPHAMTableAdapter.Fill(this.pHUKIENHNDataSet1.SANPHAM);
-            // TODO: This line of code loads data into the 'pHUKIENHNDataSet1.CTHOADON' table. You can move, or remove it, as needed.
-            this.cTHOADONTableAdapter.Fill(this.pHUKIENHNDataSet1.CTHOADON);
+            DataTable dt = DataProvider.Instance.ExecuteQuery("SELECT * FROM SANPHAM");
+            dgvTonKho.DataSource = dt;
         }
 
         private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
