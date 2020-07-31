@@ -79,6 +79,9 @@
     <Compile Include="Class\XLBANG_NHANVIEN.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Class\XLBANG_SANPHAM.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Class\XULYBANG.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -185,6 +188,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PHUKIENHNDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PHUKIENHNDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PHUKIENHNDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PHUKIENHNDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PHUKIENHNDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -293,6 +306,28 @@
     </None>
     <None Include="PHUKIENHNDataSet.xss">
       <DependentUpon>PHUKIENHNDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PHUKIENHNDataSet1.xsc">
+      <DependentUpon>PHUKIENHNDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PHUKIENHNDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PHUKIENHNDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PHUKIENHNDataSet1.xss">
+      <DependentUpon>PHUKIENHNDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PHUKIENHNDataSet2.xsc">
+      <DependentUpon>PHUKIENHNDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PHUKIENHNDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PHUKIENHNDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PHUKIENHNDataSet2.xss">
+      <DependentUpon>PHUKIENHNDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
