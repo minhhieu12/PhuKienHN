@@ -46,6 +46,8 @@ namespace PHUKIENHN
             this.loadCBTENNV();
 
             this.loadCBTENHH();
+
+            clearData();
             /*
             txtSOHD.Enabled = false;
 
@@ -57,6 +59,8 @@ namespace PHUKIENHN
 
             txtDONGIA.Enabled = false;
             */
+            btnIN.Enabled = false;
+            btnTHEMHD.Enabled = false;
         }
 
         private void loadCBTENNV()
@@ -87,6 +91,7 @@ namespace PHUKIENHN
 
         private void btnHUY_Click(object sender, EventArgs e)
         {
+            clearData();
             
         }
 
@@ -163,7 +168,32 @@ namespace PHUKIENHN
 
         private void btnTHEMHD_Click(object sender, EventArgs e)
         {
-            
+            btnIN.Enabled = false;
+            btnTHEMHD.Enabled = false;
+            btnLUU.Enabled = true;
+            btnHUY.Enabled = true;
+            btnTHEMMH.Enabled = true;
+            clearData();
+        }
+
+        private void clearData()
+        {
+            cbTENNV.SelectedValue = "";
+            cboTENHH.SelectedValue = "";
+            txtTENKH.Text = "";
+            txtDIACHI.Text = "";
+            txtSDT.Text = "";
+            txtSOHD.Text = "";
+            txtMANV.Text = "";
+            txtMAHH.Text = "";
+            txtDONGIA.Text = "0";
+            txtTHANHTIEN.Text = "0";
+            txtGIAMGIA.Text = "0";
+            txtSL.Text = "0";
+            dgvHOADONBANHANG.Rows.Clear();
+            dgvHOADONBANHANG.Refresh();
+            tongTien = 0;
+            txtTONGCONG.Text = "";
         }
 
         private void txtMANV_TextChanged(object sender, EventArgs e)
@@ -264,6 +294,7 @@ namespace PHUKIENHN
             btnHUY.Enabled = false;
             btnTHEMMH.Enabled = false;
             btnTHEMHD.Enabled = true;
+            btnIN.Enabled = true;
         }
 
         
@@ -278,6 +309,10 @@ namespace PHUKIENHN
             {
                 MessageBox.Show("Vui lòng chọn tên một loại hàng hóa!");
             }
+            else if (kiemTraLoiThemMatHang(txtMAHH.Text) == false)
+            {
+                MessageBox.Show("Mặt hàng đã tồn tại trong hóa đơn!");
+            } 
             else
             {
                 tongTien += tinhTien();
@@ -297,6 +332,22 @@ namespace PHUKIENHN
                     }
                 }
             }
+        }
+
+        private bool kiemTraLoiThemMatHang(string maHangHoa)
+        {
+            foreach(DataGridViewRow r in dgvHOADONBANHANG.Rows)
+            {
+                if(r.Cells[1].Value != null)
+                {
+                    if (maHangHoa == r.Cells[1].Value.ToString()) 
+                    {
+                        return false;
+                    }
+                }
+                
+            }
+            return true;
         }
     }
 }

@@ -52,8 +52,8 @@ namespace PHUKIENHN
 
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
-            //txtTenDN.Text = "minhnghia";
-            //txtMK.Text = "123";
+            txtTenDN.Text = "minhnghia";
+            txtMK.Text = "123";
         }
     }
 }
