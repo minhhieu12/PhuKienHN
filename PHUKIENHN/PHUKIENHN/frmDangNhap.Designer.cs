@@ -73,9 +73,9 @@
             this.txtMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMK.Location = new System.Drawing.Point(303, 167);
             this.txtMK.Name = "txtMK";
-            this.txtMK.PasswordChar = '*';
             this.txtMK.Size = new System.Drawing.Size(191, 22);
             this.txtMK.TabIndex = 1;
+            this.txtMK.UseSystemPasswordChar = true;
             // 
             // btnDangNhap
             // 

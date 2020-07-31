@@ -91,6 +91,7 @@
       <DependentUpon>daNHANVIEN.xsd</DependentUpon>
     </Compile>
     <Compile Include="DAO\ChangePasswordDAO.cs" />
+    <Compile Include="DAO\CreateInvoicesDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\LoginDAO.cs" />
     <Compile Include="DAO\PHATSINHMANV.cs" />
