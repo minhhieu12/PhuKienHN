@@ -49,6 +49,7 @@ namespace PHUKIENHN
 
         private void frmDSNV_Load(object sender, EventArgs e)
         {
+            
             // TODO: This line of code loads data into the 'pHUKIENHNDataSet.NHANVIEN' table. You can move, or remove it, as needed.
             this.nHANVIENTableAdapter.Fill(this.pHUKIENHNDataSet.NHANVIEN);
             tblNHANVIEN = new XLBANG_NHANVIEN();
@@ -105,6 +106,7 @@ namespace PHUKIENHN
         private void btnTHEMNV_Click(object sender, EventArgs e)
         {
             DSNV.AddNew();
+            txtMANV.Text = PHATSINHMANV.Instance.MANHANVIEN().ToString();
             capnhat = true;
             enablebutton();
         }
@@ -173,6 +175,15 @@ namespace PHUKIENHN
         {
             frmINDSNV FrmINNV = new frmINDSNV();
             FrmINNV.ShowDialog();
+        }
+
+        private void dgvDSNV_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            foreach(DataGridViewRow r in dgvDSNV.Rows)
+            {
+                if (dgvDSNV.Rows.Count > r.Index + 1)
+                    r.Cells[0].Value = r.Index + 1;
+            }
         }
     }
 }
