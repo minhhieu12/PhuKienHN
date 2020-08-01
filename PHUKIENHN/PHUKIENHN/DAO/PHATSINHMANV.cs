@@ -49,5 +49,36 @@ namespace PHUKIENHN.DAO
 
             return str;
         }
+
+        //Tạo mã phiếu nhập
+        public string MAPN()
+        {
+            string query = "SELECT MAX(SOPHIEUNHAP) AS SOPN FROM PHIEUNHAP";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            String str = data.Rows[0]["SOPN"].ToString();
+
+            str = str.Substring(str.Length - 3, 3);
+
+            int mapn = Convert.ToInt32(str);
+
+            mapn++;
+
+            if (mapn < 10)
+            {
+                str = "PN00" + mapn.ToString();
+            }
+            else if (mapn < 100)
+            {
+                str = "PN0" + mapn.ToString();
+            }
+            else
+            {
+                str = "PN" + mapn.ToString();
+            }
+
+            return str;
+        }
     }
 }

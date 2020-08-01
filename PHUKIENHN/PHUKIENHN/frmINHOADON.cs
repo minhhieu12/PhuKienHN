@@ -21,7 +21,15 @@ namespace PHUKIENHN.DAO
 
         private void frmINHOADON_Load(object sender, EventArgs e)
         {
-            var query = "";
+            string shd = "SELECT MAX(HOADON.SOHD) AS SHD FROM HOADON";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(shd);
+            string shd2 = dt.Rows[0]["SHD"].ToString();
+            var query = "SELECT HOADON.SOHD, HOADON.NGAYTAO, HOADON.TONGTIEN, " +
+                    "HOADON.TENKH, HOADON.DIACHI, HOADON.SDT, " +
+                    "CTHOADON.MASP, SANPHAM.TENSP, CTHOADON.SOLUONG, CTHOADON.DONGIA, CTHOADON.CHIETKHAU, CTHOADON.THANHTIEN " +
+                    "FROM CTHOADON INNER JOIN HOADON ON CTHOADON.SOHD = HOADON.SOHD INNER JOIN SANPHAM ON CTHOADON.MASP = SANPHAM.MASP " +
+                    "WHERE(HOADON.SOHD = '"+ shd2 +"')";
+
             SqlDataAdapter da = new SqlDataAdapter(query, DataProvider.Instance.connectionString);
             try
             {

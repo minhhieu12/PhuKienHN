@@ -94,6 +94,7 @@
     <Compile Include="DAO\CreateInvoicesDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\LoginDAO.cs" />
+    <Compile Include="DAO\NHAPKHODAO.cs" />
     <Compile Include="DAO\PHATSINHMANV.cs" />
     <Compile Include="DAO\RankDAO.cs" />
     <Compile Include="dsHOADON.Designer.cs">

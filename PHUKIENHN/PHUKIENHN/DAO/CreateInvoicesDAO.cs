@@ -30,6 +30,8 @@ namespace PHUKIENHN.DAO
             return data;
         }
 
+
+
         public DataTable dataComboTenNV()
         {
             string query = "SELECT MASP, TENSP, DONGIA FROM SANPHAM";
@@ -38,6 +40,8 @@ namespace PHUKIENHN.DAO
 
             return data;
         }
+
+        
 
         public string maHoaDon()
         {
@@ -69,5 +73,6 @@ namespace PHUKIENHN.DAO
             return str;
         }
 
+        
     }
 }

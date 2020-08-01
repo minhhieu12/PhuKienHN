@@ -92,7 +92,6 @@ namespace PHUKIENHN
         private void btnHUY_Click(object sender, EventArgs e)
         {
             clearData();
-            
         }
 
         private void cbTENNV_SelectedIndexChanged(object sender, EventArgs e)
