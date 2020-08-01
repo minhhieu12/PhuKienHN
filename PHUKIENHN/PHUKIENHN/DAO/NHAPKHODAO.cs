@@ -39,7 +39,9 @@ namespace PHUKIENHN.DAO
         public DataTable dataComboMAHH()
         {
             string query = string.Format("SELECT MASP, TENSP FROM SANPHAM");
+
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
             return data;
         }
     }

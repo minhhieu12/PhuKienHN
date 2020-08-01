@@ -34,7 +34,7 @@ namespace PHUKIENHN
             DataTable data = CreateInvoicesDAO.Instance.dataComboBoxMaNV();
             cboNVNHAP.DataSource = data;
             cboNVNHAP.DisplayMember = "TENNV";
-            cboNVNHAP.ValueMember = "MANV";
+            cboNVNHAP.ValueMember = "TENNV";
             cboNVNHAP.SelectedValue = "";
         }
 
@@ -43,7 +43,7 @@ namespace PHUKIENHN
             DataTable data = NHAPKHODAO.Instance.dataComboNCC();
             cboNCC.DataSource = data;
             cboNCC.DisplayMember = "TENNCC";
-            cboNCC.ValueMember = "MANCC";
+            cboNCC.ValueMember = "TENNCC";
             cboNCC.SelectedValue = "";
         }
 
@@ -52,7 +52,7 @@ namespace PHUKIENHN
             DataTable data = NHAPKHODAO.Instance.dataComboMAHH();
             cboTENHH.DataSource = data;
             cboTENHH.DisplayMember = "TENSP";
-            cboTENHH.ValueMember = "MASP";
+            cboTENHH.ValueMember = "TENSP";
             cboTENHH.SelectedValue = "";
         }
 
@@ -192,15 +192,15 @@ namespace PHUKIENHN
 
         private void cboTENHH_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*
-            string query = string.Format("SELECT * FROM SANPHAM WHERE TENSP = N'{0}'", cboTENHH.SelectedValue.ToString().Trim());
+            
+            string query = string.Format("SELECT * FROM SANPHAM WHERE TENSP = N'{0}'", cboTENHH.SelectedValue);
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
-            
-            txtMAHH.Text = data.Rows[0]["MASP"].ToString();
-            */
 
-            MessageBox.Show(cboTENHH.SelectedValue.ToString());
+            if (data.Rows.Count > 0)
+            {
+                txtMAHH.Text = data.Rows[0]["MASP"].ToString();
+            }
         }
     }
 }
