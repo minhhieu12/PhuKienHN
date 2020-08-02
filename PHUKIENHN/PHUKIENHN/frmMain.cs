@@ -63,13 +63,13 @@ namespace PHUKIENHN
                 
                 case "Bán hàng":
                     btnTaoHD.Enabled = true;
-                    btnCapNhatHD.Enabled = false;
+                    
                     btnPhieuNK.Enabled = false;
                     btnDSNV.Enabled = false;
                     btnTinhLuong.Enabled = false;
                     btnDoanhThu.Enabled = false;
                     btnTonKho.Enabled = false;
-                    btnTTDonHang.Enabled = false;
+                    
                     btnTTPM.Enabled = true;
                     btnDoiMK.Enabled = true;
                     btnThoat.Enabled = true;
@@ -77,13 +77,13 @@ namespace PHUKIENHN
 
                 case "Kho":
                     btnTaoHD.Enabled = false;
-                    btnCapNhatHD.Enabled = false;
+                    
                     btnPhieuNK.Enabled = true;
                     btnDSNV.Enabled = false;
                     btnTinhLuong.Enabled = false;
                     btnDoanhThu.Enabled = false;
                     btnTonKho.Enabled = true;
-                    btnTTDonHang.Enabled = false;
+                    
                     btnTTPM.Enabled = true;
                     btnDoiMK.Enabled = true;
                     btnThoat.Enabled = true;
@@ -91,13 +91,13 @@ namespace PHUKIENHN
 
                 case "Giao hàng":
                     btnTaoHD.Enabled = false;
-                    btnCapNhatHD.Enabled = false;
+                    
                     btnPhieuNK.Enabled = false;
                     btnDSNV.Enabled = false;
                     btnTinhLuong.Enabled = false;
                     btnDoanhThu.Enabled = false;
                     btnTonKho.Enabled = false;
-                    btnTTDonHang.Enabled = true;
+                    
                     btnTTPM.Enabled = true;
                     btnDoiMK.Enabled = true;
                     btnThoat.Enabled = true;
@@ -105,13 +105,13 @@ namespace PHUKIENHN
 
                 case "Admin":
                     btnTaoHD.Enabled = true;
-                    btnCapNhatHD.Enabled = true;
+                    
                     btnPhieuNK.Enabled = true;
                     btnDSNV.Enabled = true;
                     btnTinhLuong.Enabled = true;
                     btnDoanhThu.Enabled = true;
                     btnTonKho.Enabled = true;
-                    btnTTDonHang.Enabled = true;
+                    
                     btnTTPM.Enabled = true;
                     btnDoiMK.Enabled = true;
                     btnThoat.Enabled = true;
@@ -119,13 +119,13 @@ namespace PHUKIENHN
 
                 default:
                     btnTaoHD.Enabled = false;
-                    btnCapNhatHD.Enabled = false;
+                    
                     btnPhieuNK.Enabled = false;
                     btnDSNV.Enabled = false;
                     btnTinhLuong.Enabled = false;
                     btnDoanhThu.Enabled = false;
                     btnTonKho.Enabled = false;
-                    btnTTDonHang.Enabled = false;
+                    
                     btnTTPM.Enabled = false;
                     btnDoiMK.Enabled = false;
                     btnThoat.Enabled = false;

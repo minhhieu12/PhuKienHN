@@ -453,5 +453,11 @@ namespace PHUKIENHN
 
             txtTONGCONG.Text = tongtien.ToString() + " VND";
         }
+
+        private void btnTHEMHANGMOI_Click(object sender, EventArgs e)
+        {
+            frmTHEMSANPHAMMOI FrmTHEMSPMOI = new frmTHEMSANPHAMMOI();
+            FrmTHEMSPMOI.ShowDialog();
+        }
     }
 }

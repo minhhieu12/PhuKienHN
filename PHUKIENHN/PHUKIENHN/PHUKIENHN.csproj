@@ -170,6 +170,12 @@
     <Compile Include="frmTaoPNK.Designer.cs">
       <DependentUpon>frmTaoPNK.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTHEMNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTHEMNCC.Designer.cs">
+      <DependentUpon>frmTHEMNCC.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTHEMSANPHAMMOI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +214,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PHUKIENHNDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PHUKIENHNDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PHUKIENHNDataSet3.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -256,6 +267,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTaoPNK.resx">
       <DependentUpon>frmTaoPNK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTHEMNCC.resx">
+      <DependentUpon>frmTHEMNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTHEMSANPHAMMOI.resx">
+      <DependentUpon>frmTHEMSANPHAMMOI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTinhLuong.resx">
       <DependentUpon>frmTinhLuong.cs</DependentUpon>
@@ -338,6 +355,17 @@
     </None>
     <None Include="PHUKIENHNDataSet2.xss">
       <DependentUpon>PHUKIENHNDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PHUKIENHNDataSet3.xsc">
+      <DependentUpon>PHUKIENHNDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="PHUKIENHNDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PHUKIENHNDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PHUKIENHNDataSet3.xss">
+      <DependentUpon>PHUKIENHNDataSet3.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

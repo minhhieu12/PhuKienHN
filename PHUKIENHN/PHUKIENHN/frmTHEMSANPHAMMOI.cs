@@ -16,5 +16,18 @@ namespace PHUKIENHN
         {
             InitializeComponent();
         }
+
+        private void frmTHEMSANPHAMMOI_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'pHUKIENHNDataSet1.SANPHAM' table. You can move, or remove it, as needed.
+            this.sANPHAMTableAdapter.Fill(this.pHUKIENHNDataSet1.SANPHAM);
+
+        }
+
+        private void btnTHEMNCC_Click(object sender, EventArgs e)
+        {
+            frmTHEMNCC FrmTHEMNCC = new frmTHEMNCC();
+            FrmTHEMNCC.ShowDialog();
+        }
     }
 }

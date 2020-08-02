@@ -458,7 +458,7 @@
             this.btnTHEMHANGMOI.Size = new System.Drawing.Size(146, 34);
             this.btnTHEMHANGMOI.TabIndex = 4;
             this.btnTHEMHANGMOI.Text = "Thêm mặt hàng mới";
-            this.btnTHEMHANGMOI.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnTHEMHANGMOI.Click += new System.EventHandler(this.btnTHEMHANGMOI_Click);
             // 
             // label6
             // 
