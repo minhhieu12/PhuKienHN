@@ -326,8 +326,6 @@ namespace PHUKIENHN
                     if (dgvHOADONBANHANG.Rows.Count > r.Index + 1)
                     {
                         r.Cells[0].Value = r.Index + 1;
-
-                        i = r.Index;
                     }
                 }
             }
