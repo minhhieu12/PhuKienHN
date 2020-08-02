@@ -68,6 +68,7 @@ namespace PHUKIENHN
             btnXUATEXCEL.Enabled = false;
             btnThem.Enabled = false;
             btnTHEMHANGMOI.Enabled = false;
+            btnXOADONG.Enabled = false;
         }
 
         private void clearData()
@@ -99,6 +100,7 @@ namespace PHUKIENHN
             btnHUY.Enabled = true;
             btnThem.Enabled = true;
             btnTHEMHANGMOI.Enabled = true;
+            btnXOADONG.Enabled = true;
             clearData();
             txtSOPHIEU.Text = PHATSINHMANV.Instance.MAPN().ToString();
         }
@@ -137,7 +139,9 @@ namespace PHUKIENHN
             btnCAPNHAT.Enabled = false;
             btnLUU.Enabled = false;
             btnTHEMMOI.Enabled = true;
-            btnThem.Enabled = true;
+            btnThem.Enabled = false;
+            btnTHEMHANGMOI.Enabled = false;
+            btnXOADONG.Enabled = false;
         }
 
         private void cboNVNHAP_SelectedIndexChanged(object sender, EventArgs e)
@@ -174,7 +178,11 @@ namespace PHUKIENHN
 
         private void btnLUU_Click(object sender, EventArgs e)
         {
-            if (dgvPHIEUNHAPKHO.Rows.Count == 1)
+            if(txtSOPHIEU.Text.ToString() == string.Empty)
+            {
+                MessageBox.Show("Chưa có mã phiếu nhập! Nhấn Thêm mới!");
+            }
+            else if (dgvPHIEUNHAPKHO.Rows.Count == 1)
             {
                 MessageBox.Show("Chưa thêm mặt hàng!");
             }
@@ -219,8 +227,8 @@ namespace PHUKIENHN
                         DataProvider.Instance.ExecuteNonQuery(queryToPHIEUNHAP);
                     }
                 }
-            }
-            MessageBox.Show("Đã lưu!");
+                MessageBox.Show("Đã lưu!");
+            }            
             btnXUATEXCEL.Enabled = true;
 
         }
@@ -359,19 +367,23 @@ namespace PHUKIENHN
             worksheet.Cells[3, 2] = TENNV;
             worksheet.Cells[4, 1] = string.Format("Ghi chú");
             worksheet.Cells[4, 2] = txtGHICHU.Text.ToString();
-            worksheet.Cells[5, 1] = string.Format("Danh sách hàng hoá");
+            
+            worksheet.Cells[5, 1] = string.Format("TỔNG DOANH THU");
+            worksheet.Cells[5, 2] = txtTONGCONG.Text.ToString();
 
+            worksheet.Cells[6, 1] = string.Format("Danh sách hàng hoá");
             for (int i = 1; i < dgvPHIEUNHAPKHO.Columns.Count + 1; i++)
             {
-                worksheet.Cells[6, i] = dgvPHIEUNHAPKHO.Columns[i - 1].HeaderText;
+                worksheet.Cells[7, i] = dgvPHIEUNHAPKHO.Columns[i - 1].HeaderText;
             }
             for (int i = 0; i < dgvPHIEUNHAPKHO.Rows.Count - 1; i++)
             {
                 for (int j = 0; j < dgvPHIEUNHAPKHO.Columns.Count; j++)
                 {
-                    worksheet.Cells[i + 7, j + 1] = dgvPHIEUNHAPKHO.Rows[i].Cells[j].Value.ToString();
+                    worksheet.Cells[i + 8, j + 1] = dgvPHIEUNHAPKHO.Rows[i].Cells[j].Value.ToString();
                 }
             }
+            
         }
 
         private void btnSUADONG_Click(object sender, EventArgs e)
