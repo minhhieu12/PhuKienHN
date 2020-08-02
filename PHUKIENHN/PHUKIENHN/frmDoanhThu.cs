@@ -62,5 +62,32 @@ namespace PHUKIENHN
 
             }
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+            app.Visible = true;
+            worksheet = workbook.Sheets["Sheet1"];
+            worksheet = workbook.ActiveSheet;
+            worksheet.Name = "DOANH THU";
+            for (int i = 1; i < dgvDoanhThu.Columns.Count + 1; i++)
+            {
+                worksheet.Cells[1, i] = dgvDoanhThu.Columns[i - 1].HeaderText;
+            }
+            for (int i = 0; i < dgvDoanhThu.Rows.Count - 1; i++)
+            {                
+                for (int j = 0; j < dgvDoanhThu.Columns.Count; j++)
+                {
+                    worksheet.Cells[i + 2, j + 1] = dgvDoanhThu.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+            for (int i = dgvDoanhThu.Rows.Count + 1; i < dgvDoanhThu.Rows.Count + 2; i++)
+            {
+                worksheet.Cells[i, 1] = string.Format("TỔNG DOANH THU");
+                worksheet.Cells[i, dgvDoanhThu.ColumnCount] = txtTongDoanhThu.Text.ToString();
+            }
+        }
     }
 }

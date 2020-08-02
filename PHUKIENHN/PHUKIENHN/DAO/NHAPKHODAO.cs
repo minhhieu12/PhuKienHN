@@ -22,11 +22,11 @@ namespace PHUKIENHN.DAO
 
         private NHAPKHODAO() { }
 
-        public DataTable dataComboNCC()
+        public DataTable dataCOMBONCC()
         {
             string query = string.Format("SELECT MANCC, TENNCC FROM NHACUNGCAP");
-            DataTable data = DataProvider.Instance.ExecuteQuery(query);
-            return data;
+            DataTable datancc = DataProvider.Instance.ExecuteQuery(query);
+            return datancc;
         }
 
         public DataTable dataComboMANV()

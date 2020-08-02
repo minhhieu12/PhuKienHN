@@ -39,14 +39,13 @@
             this.btnDoanhThu = new DevExpress.XtraEditors.SimpleButton();
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.dgvDoanhThu = new System.Windows.Forms.DataGridView();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvChiTietDoanhThu = new System.Windows.Forms.DataGridView();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SOHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NGAY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TENKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TONGTIEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvChiTietDoanhThu = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoanhThu)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietDoanhThu)).BeginInit();
@@ -118,10 +117,11 @@
             this.simpleButton1.Size = new System.Drawing.Size(121, 34);
             this.simpleButton1.TabIndex = 5;
             this.simpleButton1.Text = "Xuất báo cáo";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // btnDoanhThu
             // 
-            this.btnDoanhThu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btnDoanhThu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDoanhThu.ImageOptions.Image")));
             this.btnDoanhThu.Location = new System.Drawing.Point(369, 12);
             this.btnDoanhThu.Name = "btnDoanhThu";
             this.btnDoanhThu.Size = new System.Drawing.Size(121, 34);
@@ -154,34 +154,6 @@
             this.dgvDoanhThu.TabIndex = 6;
             this.dgvDoanhThu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDoanhThu_CellClick);
             // 
-            // simpleButton3
-            // 
-            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(767, 435);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(94, 34);
-            this.simpleButton3.TabIndex = 5;
-            this.simpleButton3.Text = "In";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.dgvChiTietDoanhThu);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(566, 52);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(503, 377);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Chi tiết hoá đơn";
-            // 
-            // dgvChiTietDoanhThu
-            // 
-            this.dgvChiTietDoanhThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvChiTietDoanhThu.Location = new System.Drawing.Point(6, 21);
-            this.dgvChiTietDoanhThu.Name = "dgvChiTietDoanhThu";
-            this.dgvChiTietDoanhThu.Size = new System.Drawing.Size(491, 350);
-            this.dgvChiTietDoanhThu.TabIndex = 0;
-            // 
             // STT
             // 
             this.STT.HeaderText = "STT";
@@ -207,6 +179,25 @@
             this.TONGTIEN.HeaderText = "Tổng tiền";
             this.TONGTIEN.Name = "TONGTIEN";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgvChiTietDoanhThu);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(566, 52);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(503, 377);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Chi tiết hoá đơn";
+            // 
+            // dgvChiTietDoanhThu
+            // 
+            this.dgvChiTietDoanhThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvChiTietDoanhThu.Location = new System.Drawing.Point(6, 21);
+            this.dgvChiTietDoanhThu.Name = "dgvChiTietDoanhThu";
+            this.dgvChiTietDoanhThu.Size = new System.Drawing.Size(491, 350);
+            this.dgvChiTietDoanhThu.TabIndex = 0;
+            // 
             // frmDoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -216,7 +207,6 @@
             this.Controls.Add(this.txtTongDoanhThu);
             this.Controls.Add(this.dgvDoanhThu);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.btnDoanhThu);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.simpleButton1);
@@ -246,7 +236,6 @@
         private DevExpress.XtraEditors.SimpleButton btnDoanhThu;
         private DevExpress.XtraEditors.SimpleButton btnThoat;
         private System.Windows.Forms.DataGridView dgvDoanhThu;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvChiTietDoanhThu;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;

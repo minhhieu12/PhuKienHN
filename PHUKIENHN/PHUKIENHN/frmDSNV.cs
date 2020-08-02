@@ -165,11 +165,12 @@ namespace PHUKIENHN
             } 
             for (int i = 0; i < dgvDSNV.Rows.Count - 1; i++)
             {
-                for (int j = 1; j < dgvDSNV.Columns.Count; j++)
+                for (int j = 0; j < dgvDSNV.Columns.Count; j++)
                 {
                     worksheet.Cells[i + 2, j + 1] = dgvDSNV.Rows[i].Cells[j].Value.ToString();
                 }
             }
+            
         }
 
         private void btnINDSNV_Click(object sender, EventArgs e)
