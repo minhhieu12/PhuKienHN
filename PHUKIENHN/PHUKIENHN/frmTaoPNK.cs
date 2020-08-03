@@ -402,7 +402,7 @@ namespace PHUKIENHN
 
         public void dgvPHIEUNHAPKHO_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+                if (e.RowIndex >= 0)
             {
                 
                 DataGridViewRow row = this.dgvPHIEUNHAPKHO.Rows[e.RowIndex];
