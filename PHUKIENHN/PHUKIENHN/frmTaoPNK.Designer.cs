@@ -229,7 +229,7 @@
             // btnThem
             // 
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThem.Location = new System.Drawing.Point(426, 131);
+            this.btnThem.Location = new System.Drawing.Point(426, 134);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(76, 34);
             this.btnThem.TabIndex = 4;
@@ -512,6 +512,7 @@
             this.txtTHANHTIEN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTHANHTIEN.Location = new System.Drawing.Point(337, 103);
             this.txtTHANHTIEN.Name = "txtTHANHTIEN";
+            this.txtTHANHTIEN.ReadOnly = true;
             this.txtTHANHTIEN.Size = new System.Drawing.Size(165, 22);
             this.txtTHANHTIEN.TabIndex = 2;
             // 

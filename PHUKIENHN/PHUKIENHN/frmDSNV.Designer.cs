@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDSNV));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radNu = new System.Windows.Forms.RadioButton();
@@ -58,16 +58,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvDSNV = new System.Windows.Forms.DataGridView();
-            this.nHANVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pHUKIENHNDataSet = new PHUKIENHN.PHUKIENHNDataSet();
-            this.btnTHEMNV = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSUANV = new DevExpress.XtraEditors.SimpleButton();
-            this.btnXOANV = new DevExpress.XtraEditors.SimpleButton();
-            this.btnLUU = new DevExpress.XtraEditors.SimpleButton();
-            this.btnINDSNV = new DevExpress.XtraEditors.SimpleButton();
-            this.btnXUATEXCEL = new DevExpress.XtraEditors.SimpleButton();
-            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
-            this.nHANVIENTableAdapter = new PHUKIENHN.PHUKIENHNDataSetTableAdapters.NHANVIENTableAdapter();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mANVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tENNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,6 +70,16 @@
             this.cHUCVUDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tENDNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mATKHAUDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nHANVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pHUKIENHNDataSet = new PHUKIENHN.PHUKIENHNDataSet();
+            this.btnTHEMNV = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSUANV = new DevExpress.XtraEditors.SimpleButton();
+            this.btnXOANV = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLUU = new DevExpress.XtraEditors.SimpleButton();
+            this.btnINDSNV = new DevExpress.XtraEditors.SimpleButton();
+            this.btnXUATEXCEL = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
+            this.nHANVIENTableAdapter = new PHUKIENHN.PHUKIENHNDataSetTableAdapters.NHANVIENTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource)).BeginInit();
@@ -252,7 +252,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(326, 26);
+            this.label2.Location = new System.Drawing.Point(322, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 16);
             this.label2.TabIndex = 0;
@@ -341,14 +341,14 @@
             // dgvDSNV
             // 
             this.dgvDSNV.AutoGenerateColumns = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDSNV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDSNV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDSNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDSNV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -364,27 +364,101 @@
             this.tENDNDataGridViewTextBoxColumn,
             this.mATKHAUDataGridViewTextBoxColumn});
             this.dgvDSNV.DataSource = this.nHANVIENBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDSNV.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDSNV.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDSNV.Location = new System.Drawing.Point(12, 136);
             this.dgvDSNV.Name = "dgvDSNV";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDSNV.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDSNV.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvDSNV.Size = new System.Drawing.Size(1104, 241);
             this.dgvDSNV.TabIndex = 5;
             this.dgvDSNV.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvDSNV_DataBindingComplete);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "STT";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 35;
+            // 
+            // mANVDataGridViewTextBoxColumn
+            // 
+            this.mANVDataGridViewTextBoxColumn.DataPropertyName = "MANV";
+            this.mANVDataGridViewTextBoxColumn.HeaderText = "Mã nhân viên";
+            this.mANVDataGridViewTextBoxColumn.Name = "mANVDataGridViewTextBoxColumn";
+            // 
+            // tENNVDataGridViewTextBoxColumn
+            // 
+            this.tENNVDataGridViewTextBoxColumn.DataPropertyName = "TENNV";
+            this.tENNVDataGridViewTextBoxColumn.HeaderText = "Tên nhân viên";
+            this.tENNVDataGridViewTextBoxColumn.Name = "tENNVDataGridViewTextBoxColumn";
+            // 
+            // gIOITINHDataGridViewCheckBoxColumn
+            // 
+            this.gIOITINHDataGridViewCheckBoxColumn.DataPropertyName = "GIOITINH";
+            this.gIOITINHDataGridViewCheckBoxColumn.HeaderText = "Giới tính";
+            this.gIOITINHDataGridViewCheckBoxColumn.Name = "gIOITINHDataGridViewCheckBoxColumn";
+            this.gIOITINHDataGridViewCheckBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.gIOITINHDataGridViewCheckBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // nGAYSINHDataGridViewTextBoxColumn
+            // 
+            this.nGAYSINHDataGridViewTextBoxColumn.DataPropertyName = "NGAYSINH";
+            this.nGAYSINHDataGridViewTextBoxColumn.HeaderText = "Ngày sinh";
+            this.nGAYSINHDataGridViewTextBoxColumn.Name = "nGAYSINHDataGridViewTextBoxColumn";
+            // 
+            // qUEQUANDataGridViewTextBoxColumn
+            // 
+            this.qUEQUANDataGridViewTextBoxColumn.DataPropertyName = "QUEQUAN";
+            this.qUEQUANDataGridViewTextBoxColumn.HeaderText = "Quê quán";
+            this.qUEQUANDataGridViewTextBoxColumn.Name = "qUEQUANDataGridViewTextBoxColumn";
+            // 
+            // cMNDDataGridViewTextBoxColumn
+            // 
+            this.cMNDDataGridViewTextBoxColumn.DataPropertyName = "CMND";
+            this.cMNDDataGridViewTextBoxColumn.HeaderText = "CMND";
+            this.cMNDDataGridViewTextBoxColumn.Name = "cMNDDataGridViewTextBoxColumn";
+            // 
+            // sDTDataGridViewTextBoxColumn
+            // 
+            this.sDTDataGridViewTextBoxColumn.DataPropertyName = "SDT";
+            this.sDTDataGridViewTextBoxColumn.HeaderText = "Điện thoại";
+            this.sDTDataGridViewTextBoxColumn.Name = "sDTDataGridViewTextBoxColumn";
+            // 
+            // eMAILDataGridViewTextBoxColumn
+            // 
+            this.eMAILDataGridViewTextBoxColumn.DataPropertyName = "EMAIL";
+            this.eMAILDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.eMAILDataGridViewTextBoxColumn.Name = "eMAILDataGridViewTextBoxColumn";
+            // 
+            // cHUCVUDataGridViewTextBoxColumn
+            // 
+            this.cHUCVUDataGridViewTextBoxColumn.DataPropertyName = "CHUCVU";
+            this.cHUCVUDataGridViewTextBoxColumn.HeaderText = "Chức vụ";
+            this.cHUCVUDataGridViewTextBoxColumn.Name = "cHUCVUDataGridViewTextBoxColumn";
+            // 
+            // tENDNDataGridViewTextBoxColumn
+            // 
+            this.tENDNDataGridViewTextBoxColumn.DataPropertyName = "TENDN";
+            this.tENDNDataGridViewTextBoxColumn.HeaderText = "Tên đăng nhập";
+            this.tENDNDataGridViewTextBoxColumn.Name = "tENDNDataGridViewTextBoxColumn";
+            // 
+            // mATKHAUDataGridViewTextBoxColumn
+            // 
+            this.mATKHAUDataGridViewTextBoxColumn.DataPropertyName = "MATKHAU";
+            this.mATKHAUDataGridViewTextBoxColumn.HeaderText = "Mật khẩu";
+            this.mATKHAUDataGridViewTextBoxColumn.Name = "mATKHAUDataGridViewTextBoxColumn";
             // 
             // nHANVIENBindingSource
             // 
@@ -484,80 +558,6 @@
             // 
             this.nHANVIENTableAdapter.ClearBeforeFill = true;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 35;
-            // 
-            // mANVDataGridViewTextBoxColumn
-            // 
-            this.mANVDataGridViewTextBoxColumn.DataPropertyName = "MANV";
-            this.mANVDataGridViewTextBoxColumn.HeaderText = "Mã nhân viên";
-            this.mANVDataGridViewTextBoxColumn.Name = "mANVDataGridViewTextBoxColumn";
-            // 
-            // tENNVDataGridViewTextBoxColumn
-            // 
-            this.tENNVDataGridViewTextBoxColumn.DataPropertyName = "TENNV";
-            this.tENNVDataGridViewTextBoxColumn.HeaderText = "Tên nhân viên";
-            this.tENNVDataGridViewTextBoxColumn.Name = "tENNVDataGridViewTextBoxColumn";
-            // 
-            // gIOITINHDataGridViewCheckBoxColumn
-            // 
-            this.gIOITINHDataGridViewCheckBoxColumn.DataPropertyName = "GIOITINH";
-            this.gIOITINHDataGridViewCheckBoxColumn.HeaderText = "Giới tính";
-            this.gIOITINHDataGridViewCheckBoxColumn.Name = "gIOITINHDataGridViewCheckBoxColumn";
-            this.gIOITINHDataGridViewCheckBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.gIOITINHDataGridViewCheckBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // nGAYSINHDataGridViewTextBoxColumn
-            // 
-            this.nGAYSINHDataGridViewTextBoxColumn.DataPropertyName = "NGAYSINH";
-            this.nGAYSINHDataGridViewTextBoxColumn.HeaderText = "Ngày sinh";
-            this.nGAYSINHDataGridViewTextBoxColumn.Name = "nGAYSINHDataGridViewTextBoxColumn";
-            // 
-            // qUEQUANDataGridViewTextBoxColumn
-            // 
-            this.qUEQUANDataGridViewTextBoxColumn.DataPropertyName = "QUEQUAN";
-            this.qUEQUANDataGridViewTextBoxColumn.HeaderText = "Quê quán";
-            this.qUEQUANDataGridViewTextBoxColumn.Name = "qUEQUANDataGridViewTextBoxColumn";
-            // 
-            // cMNDDataGridViewTextBoxColumn
-            // 
-            this.cMNDDataGridViewTextBoxColumn.DataPropertyName = "CMND";
-            this.cMNDDataGridViewTextBoxColumn.HeaderText = "CMND";
-            this.cMNDDataGridViewTextBoxColumn.Name = "cMNDDataGridViewTextBoxColumn";
-            // 
-            // sDTDataGridViewTextBoxColumn
-            // 
-            this.sDTDataGridViewTextBoxColumn.DataPropertyName = "SDT";
-            this.sDTDataGridViewTextBoxColumn.HeaderText = "Điện thoại";
-            this.sDTDataGridViewTextBoxColumn.Name = "sDTDataGridViewTextBoxColumn";
-            // 
-            // eMAILDataGridViewTextBoxColumn
-            // 
-            this.eMAILDataGridViewTextBoxColumn.DataPropertyName = "EMAIL";
-            this.eMAILDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.eMAILDataGridViewTextBoxColumn.Name = "eMAILDataGridViewTextBoxColumn";
-            // 
-            // cHUCVUDataGridViewTextBoxColumn
-            // 
-            this.cHUCVUDataGridViewTextBoxColumn.DataPropertyName = "CHUCVU";
-            this.cHUCVUDataGridViewTextBoxColumn.HeaderText = "Chức vụ";
-            this.cHUCVUDataGridViewTextBoxColumn.Name = "cHUCVUDataGridViewTextBoxColumn";
-            // 
-            // tENDNDataGridViewTextBoxColumn
-            // 
-            this.tENDNDataGridViewTextBoxColumn.DataPropertyName = "TENDN";
-            this.tENDNDataGridViewTextBoxColumn.HeaderText = "Tên đăng nhập";
-            this.tENDNDataGridViewTextBoxColumn.Name = "tENDNDataGridViewTextBoxColumn";
-            // 
-            // mATKHAUDataGridViewTextBoxColumn
-            // 
-            this.mATKHAUDataGridViewTextBoxColumn.DataPropertyName = "MATKHAU";
-            this.mATKHAUDataGridViewTextBoxColumn.HeaderText = "Mật khẩu";
-            this.mATKHAUDataGridViewTextBoxColumn.Name = "mATKHAUDataGridViewTextBoxColumn";
-            // 
             // frmDSNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -572,6 +572,7 @@
             this.Controls.Add(this.btnXOANV);
             this.Controls.Add(this.btnTHEMNV);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDSNV";
             this.Text = "Danh sách nhân viên";
             this.Load += new System.EventHandler(this.frmDSNV_Load);
