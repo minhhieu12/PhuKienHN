@@ -107,5 +107,25 @@ namespace PHUKIENHN.DAO
 
             return dt.Rows[0]["CHUCVU"].ToString();
         }
+
+        public int soNgayNghi(string chucVu, int soGioLam)
+        {
+            int gio = 0;
+            switch (chucVu)
+            {
+                case "Bán hàng":
+                    gio = (180 - soGioLam) / 6;
+                    break;
+
+                case "Kho":
+                    gio = (72 - soGioLam) / 6;
+                    break;
+
+                case "Admin":
+                    gio = 0;
+                    break;
+            }
+            return gio;
+        }
     }
 }

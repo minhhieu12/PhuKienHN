@@ -165,20 +165,62 @@ namespace PHUKIENHN
             if (e.RowIndex >= 0 && e.RowIndex < dgvChamCong.Rows.Count - 1)
             {
                 DataGridViewRow row = this.dgvChamCong.Rows[e.RowIndex];
+
                 indexRow = row;
 
                 cboTenNhanVien.SelectedValue = row.Cells[1].Value.ToString();
+
+                string chucVu = PayrollDAO.Instace.chucVu(cboTenNhanVien.SelectedValue.ToString()).Trim();
+
+                int soGioLam = Convert.ToInt32(row.Cells[4].Value);
+
+                txtNgayNghi.Text = PayrollDAO.Instace.soNgayNghi(chucVu, soGioLam).ToString();
+
                 txtThuong.Text = row.Cells[6].Value.ToString();
+
                 txtPhat.Text = row.Cells[7].Value.ToString();
+
                 txtTongLuong.Text = row.Cells[8].Value.ToString();
+
+                btnSua.Enabled = true;
+
+                btnTinhLuong.Enabled = false;
             }
-            btnSua.Enabled = true;
+            if (e.RowIndex == dgvChamCong.Rows.Count - 1)
+            {
+                btnSua.Enabled = false;
+                btnTinhLuong.Enabled = true;
+
+            }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            string chucVu = PayrollDAO.Instace.chucVu(cboTenNhanVien.SelectedValue.ToString()).Trim();
+
+            //string maNhanVien = cboTenNhanVien.SelectedValue.ToString();
+
+            //string tenNhanVien = PayrollDAO.Instace.TENNV(cboTenNhanVien.SelectedValue.ToString());
+
+            //string ngayCham = dateNgayCham.Value.ToString("yyyy-MM-dd");
+
+            int ngayNghi = Convert.ToInt32(txtNgayNghi.Text.ToString());
+
+            int soGioLam = PayrollDAO.Instace.soGioLam(chucVu, ngayNghi);
+
+           //int luongTheoGio = PayrollDAO.Instace.luongTheoChucVu(chucVu);
+
+            int tongLuong = PayrollDAO.Instace.tinhLuong(chucVu, ngayNghi);
+
+            int luongThuong = Convert.ToInt32(txtThuong.Text);
+
+            int luongPhat = Convert.ToInt32(txtPhat.Text);
+
+            txtTongLuong.Text = Convert.ToString(tongLuong + luongThuong - luongPhat);
+
             indexRow.Cells[6].Value = txtThuong.Text;
             indexRow.Cells[7].Value = txtPhat.Text;
+            indexRow.Cells[4].Value = soGioLam;
             indexRow.Cells[8].Value = txtTongLuong.Text;
         }
     }
