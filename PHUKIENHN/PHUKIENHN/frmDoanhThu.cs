@@ -63,7 +63,7 @@ namespace PHUKIENHN
             }
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void btnXUATEXCEL_Click(object sender, EventArgs e)
         {
             Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
             Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
@@ -77,7 +77,7 @@ namespace PHUKIENHN
                 worksheet.Cells[1, i] = dgvDoanhThu.Columns[i - 1].HeaderText;
             }
             for (int i = 0; i < dgvDoanhThu.Rows.Count - 1; i++)
-            {                
+            {
                 for (int j = 0; j < dgvDoanhThu.Columns.Count; j++)
                 {
                     worksheet.Cells[i + 2, j + 1] = dgvDoanhThu.Rows[i].Cells[j].Value.ToString();

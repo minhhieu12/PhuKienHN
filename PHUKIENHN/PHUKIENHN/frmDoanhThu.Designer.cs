@@ -35,7 +35,7 @@
             this.dtEnd = new System.Windows.Forms.DateTimePicker();
             this.txtTongDoanhThu = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnXUATEXCEL = new DevExpress.XtraEditors.SimpleButton();
             this.btnDoanhThu = new DevExpress.XtraEditors.SimpleButton();
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.dgvDoanhThu = new System.Windows.Forms.DataGridView();
@@ -95,6 +95,7 @@
             // 
             this.txtTongDoanhThu.Location = new System.Drawing.Point(172, 475);
             this.txtTongDoanhThu.Name = "txtTongDoanhThu";
+            this.txtTongDoanhThu.ReadOnly = true;
             this.txtTongDoanhThu.Size = new System.Drawing.Size(195, 20);
             this.txtTongDoanhThu.TabIndex = 1;
             // 
@@ -109,15 +110,15 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "TỔNG DOANH THU:";
             // 
-            // simpleButton1
+            // btnXUATEXCEL
             // 
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(945, 435);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(121, 34);
-            this.simpleButton1.TabIndex = 5;
-            this.simpleButton1.Text = "Xuất báo cáo";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.btnXUATEXCEL.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXUATEXCEL.ImageOptions.Image")));
+            this.btnXUATEXCEL.Location = new System.Drawing.Point(945, 435);
+            this.btnXUATEXCEL.Name = "btnXUATEXCEL";
+            this.btnXUATEXCEL.Size = new System.Drawing.Size(121, 34);
+            this.btnXUATEXCEL.TabIndex = 5;
+            this.btnXUATEXCEL.Text = "Xuất báo cáo";
+            this.btnXUATEXCEL.Click += new System.EventHandler(this.btnXUATEXCEL_Click);
             // 
             // btnDoanhThu
             // 
@@ -209,7 +210,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnDoanhThu);
             this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnXUATEXCEL);
             this.Controls.Add(this.dtEnd);
             this.Controls.Add(this.dtStart);
             this.Controls.Add(this.label2);
@@ -232,7 +233,7 @@
         private System.Windows.Forms.DateTimePicker dtEnd;
         private System.Windows.Forms.TextBox txtTongDoanhThu;
         private System.Windows.Forms.Label label8;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnXUATEXCEL;
         private DevExpress.XtraEditors.SimpleButton btnDoanhThu;
         private DevExpress.XtraEditors.SimpleButton btnThoat;
         private System.Windows.Forms.DataGridView dgvDoanhThu;

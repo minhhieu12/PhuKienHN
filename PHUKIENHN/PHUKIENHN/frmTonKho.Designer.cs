@@ -31,6 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTonKho));
             this.dgvTonKho = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mASPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tENSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dVTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dONGIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sLTONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sANPHAMBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pHUKIENHNDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pHUKIENHNDataSet1 = new PHUKIENHN.PHUKIENHNDataSet1();
             this.btnXUATEXCEL = new DevExpress.XtraEditors.SimpleButton();
@@ -44,14 +51,8 @@
             this.pHUKIENHNDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sANPHAMBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sANPHAMTableAdapter = new PHUKIENHN.PHUKIENHNDataSet1TableAdapters.SANPHAMTableAdapter();
-            this.sANPHAMBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mASPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tENSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dVTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dONGIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sLTONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTonKho)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sANPHAMBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHUKIENHNDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHUKIENHNDataSet1)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -59,7 +60,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pHUKIENHNDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHUKIENHNDataSet2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sANPHAMBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sANPHAMBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvTonKho
@@ -80,6 +80,48 @@
             this.dgvTonKho.TabIndex = 1;
             this.dgvTonKho.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridView1_DataBindingComplete);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "STT";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 50;
+            // 
+            // mASPDataGridViewTextBoxColumn
+            // 
+            this.mASPDataGridViewTextBoxColumn.DataPropertyName = "MASP";
+            this.mASPDataGridViewTextBoxColumn.HeaderText = "Mã hàng hoá";
+            this.mASPDataGridViewTextBoxColumn.Name = "mASPDataGridViewTextBoxColumn";
+            // 
+            // tENSPDataGridViewTextBoxColumn
+            // 
+            this.tENSPDataGridViewTextBoxColumn.DataPropertyName = "TENSP";
+            this.tENSPDataGridViewTextBoxColumn.HeaderText = "Tên hàng hoá";
+            this.tENSPDataGridViewTextBoxColumn.Name = "tENSPDataGridViewTextBoxColumn";
+            this.tENSPDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // dVTDataGridViewTextBoxColumn
+            // 
+            this.dVTDataGridViewTextBoxColumn.DataPropertyName = "DVT";
+            this.dVTDataGridViewTextBoxColumn.HeaderText = "Đơn vị tính";
+            this.dVTDataGridViewTextBoxColumn.Name = "dVTDataGridViewTextBoxColumn";
+            // 
+            // dONGIADataGridViewTextBoxColumn
+            // 
+            this.dONGIADataGridViewTextBoxColumn.DataPropertyName = "DONGIA";
+            this.dONGIADataGridViewTextBoxColumn.HeaderText = "Đơn giá";
+            this.dONGIADataGridViewTextBoxColumn.Name = "dONGIADataGridViewTextBoxColumn";
+            // 
+            // sLTONDataGridViewTextBoxColumn
+            // 
+            this.sLTONDataGridViewTextBoxColumn.DataPropertyName = "SLTON";
+            this.sLTONDataGridViewTextBoxColumn.HeaderText = "Số lượng tồn";
+            this.sLTONDataGridViewTextBoxColumn.Name = "sLTONDataGridViewTextBoxColumn";
+            // 
+            // sANPHAMBindingSource1
+            // 
+            this.sANPHAMBindingSource1.DataMember = "SANPHAM";
+            this.sANPHAMBindingSource1.DataSource = this.pHUKIENHNDataSet1BindingSource;
+            // 
             // pHUKIENHNDataSet1BindingSource
             // 
             this.pHUKIENHNDataSet1BindingSource.DataSource = this.pHUKIENHNDataSet1;
@@ -92,7 +134,7 @@
             // 
             // btnXUATEXCEL
             // 
-            this.btnXUATEXCEL.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnXUATEXCEL.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXUATEXCEL.ImageOptions.Image")));
             this.btnXUATEXCEL.Location = new System.Drawing.Point(697, 81);
             this.btnXUATEXCEL.Name = "btnXUATEXCEL";
             this.btnXUATEXCEL.Size = new System.Drawing.Size(116, 41);
@@ -169,48 +211,6 @@
             // 
             this.sANPHAMTableAdapter.ClearBeforeFill = true;
             // 
-            // sANPHAMBindingSource1
-            // 
-            this.sANPHAMBindingSource1.DataMember = "SANPHAM";
-            this.sANPHAMBindingSource1.DataSource = this.pHUKIENHNDataSet1BindingSource;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 50;
-            // 
-            // mASPDataGridViewTextBoxColumn
-            // 
-            this.mASPDataGridViewTextBoxColumn.DataPropertyName = "MASP";
-            this.mASPDataGridViewTextBoxColumn.HeaderText = "Mã hàng hoá";
-            this.mASPDataGridViewTextBoxColumn.Name = "mASPDataGridViewTextBoxColumn";
-            // 
-            // tENSPDataGridViewTextBoxColumn
-            // 
-            this.tENSPDataGridViewTextBoxColumn.DataPropertyName = "TENSP";
-            this.tENSPDataGridViewTextBoxColumn.HeaderText = "Tên hàng hoá";
-            this.tENSPDataGridViewTextBoxColumn.Name = "tENSPDataGridViewTextBoxColumn";
-            this.tENSPDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // dVTDataGridViewTextBoxColumn
-            // 
-            this.dVTDataGridViewTextBoxColumn.DataPropertyName = "DVT";
-            this.dVTDataGridViewTextBoxColumn.HeaderText = "Đơn vị tính";
-            this.dVTDataGridViewTextBoxColumn.Name = "dVTDataGridViewTextBoxColumn";
-            // 
-            // dONGIADataGridViewTextBoxColumn
-            // 
-            this.dONGIADataGridViewTextBoxColumn.DataPropertyName = "DONGIA";
-            this.dONGIADataGridViewTextBoxColumn.HeaderText = "Đơn giá";
-            this.dONGIADataGridViewTextBoxColumn.Name = "dONGIADataGridViewTextBoxColumn";
-            // 
-            // sLTONDataGridViewTextBoxColumn
-            // 
-            this.sLTONDataGridViewTextBoxColumn.DataPropertyName = "SLTON";
-            this.sLTONDataGridViewTextBoxColumn.HeaderText = "Số lượng tồn";
-            this.sLTONDataGridViewTextBoxColumn.Name = "sLTONDataGridViewTextBoxColumn";
-            // 
             // frmTonKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,10 +220,12 @@
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.dgvTonKho);
             this.Controls.Add(this.btnXUATEXCEL);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmTonKho";
             this.Text = "Tồn kho";
             this.Load += new System.EventHandler(this.frmTonKho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTonKho)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sANPHAMBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHUKIENHNDataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHUKIENHNDataSet1)).EndInit();
             this.groupBox3.ResumeLayout(false);
@@ -232,7 +234,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pHUKIENHNDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHUKIENHNDataSet2BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sANPHAMBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sANPHAMBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
