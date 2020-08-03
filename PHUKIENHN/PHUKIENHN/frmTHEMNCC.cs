@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PHUKIENHN.DAO;
 
 namespace PHUKIENHN
 {
@@ -19,9 +20,36 @@ namespace PHUKIENHN
 
         private void frmTHEMNCC_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'pHUKIENHNDataSet3.NHACUNGCAP' table. You can move, or remove it, as needed.
-            this.nHACUNGCAPTableAdapter.Fill(this.pHUKIENHNDataSet3.NHACUNGCAP);
+            txtMANCC.Text = PHATSINHMANV.Instance.MANCC();
 
+        }
+
+        private void btnTHEMMOI_Click(object sender, EventArgs e)
+        {
+            txtMANCC.Text = PHATSINHMANV.Instance.MANCC();
+            txtDIACHI.Text = "";
+            txtEMAIL.Text = "";
+            txtSDT.Text = "";
+            txtTENNCC.Text = "";
+        }
+
+        private void btnLUU_Click(object sender, EventArgs e)
+        {
+            string maNCC = txtMANCC.Text.ToString();
+
+            string tenNCC = txtTENNCC.Text.ToString();
+
+            string diachi = txtDIACHI.Text.ToString();
+
+            string sdt = txtSDT.Text.ToString();
+
+            string email = txtEMAIL.Text.ToString();
+
+            string querytoNCC = string.Format("INSERT INTO NHACUNGCAP (MANCC, TENNCC, DIACHI, SDT, EMAIL) VALUES ('{0}', N'{1}', N'{2}', '{3}', '{4}')", maNCC, tenNCC, diachi, sdt, email);
+
+            DataProvider.Instance.ExecuteNonQuery(querytoNCC);
+
+            MessageBox.Show("Đã lưu");
         }
     }
 }

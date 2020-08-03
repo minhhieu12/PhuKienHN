@@ -80,5 +80,65 @@ namespace PHUKIENHN.DAO
 
             return str;
         }
+
+        public string MASP()
+        {
+            string query = "SELECT MAX(MASP) AS MASP FROM SANPHAM";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            String str = data.Rows[0]["MASP"].ToString();
+
+            str = str.Substring(str.Length - 3, 3);
+
+            int masp = Convert.ToInt32(str);
+
+            masp++;
+
+            if (masp < 10)
+            {
+                str = "SP00" + masp.ToString();
+            }
+            else if (masp < 100)
+            {
+                str = "SP0" + masp.ToString();
+            }
+            else
+            {
+                str = "SP" + masp.ToString();
+            }
+
+            return str;
+        }
+
+        public string MANCC()
+        {
+            string query = "SELECT MAX(MANCC) AS MANCC FROM NHACUNGCAP";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            String str = data.Rows[0]["MANCC"].ToString();
+
+            str = str.Substring(str.Length - 3, 3);
+
+            int masp = Convert.ToInt32(str);
+
+            masp++;
+
+            if (masp < 10)
+            {
+                str = "CC00" + masp.ToString();
+            }
+            else if (masp < 100)
+            {
+                str = "CC0" + masp.ToString();
+            }
+            else
+            {
+                str = "CC" + masp.ToString();
+            }
+
+            return str;
+        }
     }
 }

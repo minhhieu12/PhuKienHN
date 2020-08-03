@@ -99,6 +99,8 @@
     <Compile Include="DAO\PHATSINHMANV.cs" />
     <Compile Include="DAO\RankDAO.cs" />
     <Compile Include="DAO\RevenueDAO.cs" />
+    <Compile Include="DAO\THEMNCCMOI.cs" />
+    <Compile Include="DAO\THEMSPMOI.cs" />
     <Compile Include="dsHOADON.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
