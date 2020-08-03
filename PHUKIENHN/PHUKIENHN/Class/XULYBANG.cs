@@ -65,7 +65,7 @@ namespace PHUKIENHN.Class
             }
             catch (SqlException ex)
             {
-                throw ex;
+                //throw ex;
             }
         }
         public Boolean ghi()
