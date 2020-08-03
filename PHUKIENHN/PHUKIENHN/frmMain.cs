@@ -278,6 +278,7 @@ namespace PHUKIENHN
             }
         }
 
+        /*
         private void btnTTDonHang_ItemClick(object sender, ItemClickEventArgs e)
         {
             int index = tabform.TabPages.IndexOfKey("CapNhatTTDonHang");
@@ -298,6 +299,7 @@ namespace PHUKIENHN
                 f.Show();
             }
         }
+        */
 
         private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
         {

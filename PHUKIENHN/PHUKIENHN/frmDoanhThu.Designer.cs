@@ -112,7 +112,7 @@
             // simpleButton1
             // 
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(867, 435);
+            this.simpleButton1.Location = new System.Drawing.Point(945, 435);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(121, 34);
             this.simpleButton1.TabIndex = 5;
@@ -132,7 +132,7 @@
             // btnThoat
             // 
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(994, 435);
+            this.btnThoat.Location = new System.Drawing.Point(1072, 435);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 34);
             this.btnThoat.TabIndex = 5;
@@ -185,7 +185,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(566, 52);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(503, 377);
+            this.groupBox1.Size = new System.Drawing.Size(581, 377);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chi tiết hoá đơn";
@@ -195,14 +195,14 @@
             this.dgvChiTietDoanhThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvChiTietDoanhThu.Location = new System.Drawing.Point(6, 21);
             this.dgvChiTietDoanhThu.Name = "dgvChiTietDoanhThu";
-            this.dgvChiTietDoanhThu.Size = new System.Drawing.Size(491, 350);
+            this.dgvChiTietDoanhThu.Size = new System.Drawing.Size(569, 350);
             this.dgvChiTietDoanhThu.TabIndex = 0;
             // 
             // frmDoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1081, 507);
+            this.ClientSize = new System.Drawing.Size(1159, 507);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtTongDoanhThu);
             this.Controls.Add(this.dgvDoanhThu);

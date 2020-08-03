@@ -112,12 +112,6 @@
     <Compile Include="frmCapNhatHD.Designer.cs">
       <DependentUpon>frmCapNhatHD.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCapNhatTTDH.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCapNhatTTDH.Designer.cs">
-      <DependentUpon>frmCapNhatTTDH.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,9 +233,6 @@
     </Compile>
     <EmbeddedResource Include="frmCapNhatHD.resx">
       <DependentUpon>frmCapNhatHD.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCapNhatTTDH.resx">
-      <DependentUpon>frmCapNhatTTDH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
