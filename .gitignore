@@ -260,5 +260,3 @@ paket-files/
 __pycache__/
 *.pyc
 
-/PHUKIENHN/PHUKIENHN/Class/XULYBANG.cs
-/PHUKIENHN/PHUKIENHN/DAO/DataProvider.cs
