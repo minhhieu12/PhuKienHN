@@ -157,5 +157,29 @@ namespace PHUKIENHN
                 }
             }
         }
+
+        DataGridViewRow indexRow;
+        private void dgvChamCong_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            if (e.RowIndex >= 0 && e.RowIndex < dgvChamCong.Rows.Count - 1)
+            {
+                DataGridViewRow row = this.dgvChamCong.Rows[e.RowIndex];
+                indexRow = row;
+
+                cboTenNhanVien.SelectedValue = row.Cells[1].Value.ToString();
+                txtThuong.Text = row.Cells[6].Value.ToString();
+                txtPhat.Text = row.Cells[7].Value.ToString();
+                txtTongLuong.Text = row.Cells[8].Value.ToString();
+            }
+            btnSua.Enabled = true;
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            indexRow.Cells[6].Value = txtThuong.Text;
+            indexRow.Cells[7].Value = txtPhat.Text;
+            indexRow.Cells[8].Value = txtTongLuong.Text;
+        }
     }
 }

@@ -82,6 +82,7 @@
             this.dgvChamCong.Name = "dgvChamCong";
             this.dgvChamCong.Size = new System.Drawing.Size(896, 347);
             this.dgvChamCong.TabIndex = 1;
+            this.dgvChamCong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChamCong_CellClick);
             // 
             // Column1
             // 
@@ -350,6 +351,7 @@
             this.btnSua.Size = new System.Drawing.Size(75, 38);
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sừa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
