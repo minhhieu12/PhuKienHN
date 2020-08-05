@@ -33,8 +33,8 @@ namespace PHUKIENHN
         private void frmTHEMSANPHAMMOI_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'pHUKIENHNDataSet1.SANPHAM' table. You can move, or remove it, as needed.
-            this.sANPHAMTableAdapter.Fill(this.pHUKIENHNDataSet1.SANPHAM);
-
+            //this.sANPHAMTableAdapter.Fill(this.pHUKIENHNDataSet1.SANPHAM);
+            btnTHEMMOI.Enabled = false;
             txtMASP.Text = PHATSINHMANV.Instance.MASP().ToString();
             loadCBONCC();
             txtNCC.Text = "";
@@ -69,7 +69,10 @@ namespace PHUKIENHN
                     i = r.Index;
                 }
             }
-            */            
+            */
+
+            btnTHEMMOI.Enabled = true;
+            btnLUU.Enabled = false;
 
             string maSP = txtMASP.Text.ToString();
 
@@ -99,7 +102,7 @@ namespace PHUKIENHN
             txtDVT.Text = "";
             txtGIA.Text = "";
             txtSL.Text = "";
-
+            btnLUU.Enabled = true;
         }
     }
 }

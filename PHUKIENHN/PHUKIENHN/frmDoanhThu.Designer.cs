@@ -217,6 +217,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmDoanhThu";
             this.Text = "Doanh thu";
+            this.Load += new System.EventHandler(this.frmDoanhThu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoanhThu)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietDoanhThu)).EndInit();

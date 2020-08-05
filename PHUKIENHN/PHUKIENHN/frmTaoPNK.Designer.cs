@@ -114,7 +114,7 @@
             this.cboNVNHAP.Location = new System.Drawing.Point(125, 82);
             this.cboNVNHAP.Name = "cboNVNHAP";
             this.cboNVNHAP.Size = new System.Drawing.Size(156, 24);
-            this.cboNVNHAP.TabIndex = 4;
+            this.cboNVNHAP.TabIndex = 0;
             this.cboNVNHAP.SelectedIndexChanged += new System.EventHandler(this.cboNVNHAP_SelectedIndexChanged);
             // 
             // txtMANV
@@ -135,7 +135,7 @@
             this.txtGHICHU.Multiline = true;
             this.txtGHICHU.Name = "txtGHICHU";
             this.txtGHICHU.Size = new System.Drawing.Size(156, 24);
-            this.txtGHICHU.TabIndex = 3;
+            this.txtGHICHU.TabIndex = 1;
             // 
             // txtSOPHIEU
             // 
@@ -213,7 +213,7 @@
             this.cboNCC.Location = new System.Drawing.Point(337, 45);
             this.cboNCC.Name = "cboNCC";
             this.cboNCC.Size = new System.Drawing.Size(165, 24);
-            this.cboNCC.TabIndex = 4;
+            this.cboNCC.TabIndex = 3;
             this.cboNCC.SelectedIndexChanged += new System.EventHandler(this.cboNCC_SelectedIndexChanged);
             // 
             // label3
@@ -228,10 +228,12 @@
             // 
             // btnThem
             // 
+            this.btnThem.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Appearance.Options.UseFont = true;
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThem.Location = new System.Drawing.Point(426, 134);
+            this.btnThem.Location = new System.Drawing.Point(357, 131);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(76, 34);
+            this.btnThem.Size = new System.Drawing.Size(145, 34);
             this.btnThem.TabIndex = 4;
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -397,7 +399,7 @@
             this.cboTENHH.Location = new System.Drawing.Point(337, 15);
             this.cboTENHH.Name = "cboTENHH";
             this.cboTENHH.Size = new System.Drawing.Size(165, 24);
-            this.cboTENHH.TabIndex = 4;
+            this.cboTENHH.TabIndex = 2;
             this.cboTENHH.SelectedIndexChanged += new System.EventHandler(this.cboTENHH_SelectedIndexChanged);
             // 
             // label7
@@ -452,12 +454,14 @@
             // 
             // btnTHEMHANGMOI
             // 
+            this.btnTHEMHANGMOI.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTHEMHANGMOI.Appearance.Options.UseFont = true;
             this.btnTHEMHANGMOI.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTHEMHANGMOI.ImageOptions.Image")));
-            this.btnTHEMHANGMOI.Location = new System.Drawing.Point(274, 131);
+            this.btnTHEMHANGMOI.Location = new System.Drawing.Point(240, 131);
             this.btnTHEMHANGMOI.Name = "btnTHEMHANGMOI";
-            this.btnTHEMHANGMOI.Size = new System.Drawing.Size(146, 34);
+            this.btnTHEMHANGMOI.Size = new System.Drawing.Size(111, 34);
             this.btnTHEMHANGMOI.TabIndex = 4;
-            this.btnTHEMHANGMOI.Text = "Thêm mặt hàng mới";
+            this.btnTHEMHANGMOI.Text = "Thêm SP mới";
             this.btnTHEMHANGMOI.Click += new System.EventHandler(this.btnTHEMHANGMOI_Click);
             // 
             // label6
@@ -496,7 +500,7 @@
             this.txtDVT.Location = new System.Drawing.Point(89, 77);
             this.txtDVT.Name = "txtDVT";
             this.txtDVT.Size = new System.Drawing.Size(127, 22);
-            this.txtDVT.TabIndex = 2;
+            this.txtDVT.TabIndex = 5;
             // 
             // txtMANCC
             // 
@@ -522,7 +526,7 @@
             this.txtGIAMGIA.Location = new System.Drawing.Point(89, 136);
             this.txtGIAMGIA.Name = "txtGIAMGIA";
             this.txtGIAMGIA.Size = new System.Drawing.Size(127, 22);
-            this.txtGIAMGIA.TabIndex = 2;
+            this.txtGIAMGIA.TabIndex = 7;
             this.txtGIAMGIA.TextChanged += new System.EventHandler(this.txtGIAMGIA_TextChanged);
             // 
             // txtDONGIA
@@ -531,7 +535,7 @@
             this.txtDONGIA.Location = new System.Drawing.Point(89, 108);
             this.txtDONGIA.Name = "txtDONGIA";
             this.txtDONGIA.Size = new System.Drawing.Size(127, 22);
-            this.txtDONGIA.TabIndex = 2;
+            this.txtDONGIA.TabIndex = 6;
             this.txtDONGIA.TextChanged += new System.EventHandler(this.txtDONGIA_TextChanged);
             // 
             // txtSOLUONG
@@ -540,7 +544,7 @@
             this.txtSOLUONG.Location = new System.Drawing.Point(89, 49);
             this.txtSOLUONG.Name = "txtSOLUONG";
             this.txtSOLUONG.Size = new System.Drawing.Size(127, 22);
-            this.txtSOLUONG.TabIndex = 2;
+            this.txtSOLUONG.TabIndex = 4;
             this.txtSOLUONG.TextChanged += new System.EventHandler(this.txtSOLUONG_TextChanged);
             // 
             // txtMAHH

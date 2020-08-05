@@ -89,5 +89,10 @@ namespace PHUKIENHN
                 worksheet.Cells[i, dgvDoanhThu.ColumnCount] = txtTongDoanhThu.Text.ToString();
             }
         }
+
+        private void frmDoanhThu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

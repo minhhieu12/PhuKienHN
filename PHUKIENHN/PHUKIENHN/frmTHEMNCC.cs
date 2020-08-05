@@ -21,7 +21,7 @@ namespace PHUKIENHN
         private void frmTHEMNCC_Load(object sender, EventArgs e)
         {
             txtMANCC.Text = PHATSINHMANV.Instance.MANCC();
-
+            btnTHEMMOI.Enabled = false;
         }
 
         private void btnTHEMMOI_Click(object sender, EventArgs e)
@@ -31,6 +31,9 @@ namespace PHUKIENHN
             txtEMAIL.Text = "";
             txtSDT.Text = "";
             txtTENNCC.Text = "";
+
+            btnLUU.Enabled = true;
+            btnLUU.Enabled = false;
         }
 
         private void btnLUU_Click(object sender, EventArgs e)
@@ -50,6 +53,8 @@ namespace PHUKIENHN
             DataProvider.Instance.ExecuteNonQuery(querytoNCC);
 
             MessageBox.Show("Đã lưu");
+            btnTHEMMOI.Enabled = true;
+            btnLUU.Enabled = false;
         }
     }
 }

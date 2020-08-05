@@ -62,6 +62,7 @@ namespace PHUKIENHN
             this.loadCBOSP();
             this.loadCBONCC();
             clearData();
+            disableButton();
             btnLUU.Enabled = false;
             btnHUY.Enabled = false;
             btnCAPNHAT.Enabled = false;
@@ -69,6 +70,32 @@ namespace PHUKIENHN
             btnThem.Enabled = false;
             btnTHEMHANGMOI.Enabled = false;
             btnXOADONG.Enabled = false;
+        }
+
+        private void disableButton()
+        {
+            dateNGAY.Enabled = false;
+            txtGHICHU.Enabled = false;
+            txtSOLUONG.Enabled = false;
+            cboNVNHAP.Enabled = false;
+            txtDVT.Enabled = false;
+            txtDONGIA.Enabled = false;
+            txtGIAMGIA.Enabled = false;
+            cboTENHH.Enabled = false;
+            cboNCC.Enabled = false;
+        }
+
+        private void enableButton()
+        {
+            dateNGAY.Enabled = true;
+            txtGHICHU.Enabled = true;
+            txtSOLUONG.Enabled = true;
+            cboNVNHAP.Enabled = true;
+            txtDVT.Enabled = true;
+            txtDONGIA.Enabled = true;
+            txtGIAMGIA.Enabled = true;
+            cboTENHH.Enabled = true;
+            cboNCC.Enabled = true;
         }
 
         private void clearData()
@@ -94,6 +121,7 @@ namespace PHUKIENHN
 
         private void btnTHEMMOI_Click(object sender, EventArgs e)
         {
+            enableButton();
             btnXUATEXCEL.Enabled = false;
             btnCAPNHAT.Enabled = false;
             btnLUU.Enabled = true;
@@ -250,6 +278,7 @@ namespace PHUKIENHN
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
+            
             tongtien += tinhTien();
 
             string queryTENHH = string.Format("SELECT TENSP FROM SANPHAM WHERE MASP = '{0}'", cboTENHH.SelectedValue.ToString());
